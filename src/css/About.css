@@ -1,0 +1,124 @@
+/* src/css/AboutSection.css */
+
+.about-container {
+    padding: 80px 50px;
+    background-color: var(--header-bg); /* O'zgargan fon rangi */
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.8em;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.section-subtitle {
+    font-size: 1.2em;
+    margin-bottom: 50px;
+    color: #cccccc;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Chap ustun torroq, O'ng ustun kengroq */
+    gap: 40px;
+    text-align: left;
+}
+
+/* Karta stillari */
+.mission-card,
+.skills-card {
+    background-color: var(--dark-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.mission-card h3,
+.skills-card h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.mission-card p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #cccccc;
+}
+
+/* O'rganiladigan Mavzular Ro'yxati */
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    font-size: 1em;
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+    color: var(--secondary-color);
+}
+
+.skills-list li:first-child {
+    border-top: 1px solid #333;
+}
+.skills-list li:last-child {
+    border-bottom: none;
+}
+
+/* Tugmalar */
+.btn-about-register {
+    background-color: #5cb85c; /* Yashil tugma */
+    color: var(--dark-bg);
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+    display: inline-block;
+    text-decoration: none;
+}
+.btn-about-register:hover {
+    background-color: #4a9e4a;
+}
+
+.contact-prompt {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: var(--dark-bg);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-prompt p {
+    font-size: 1.2em;
+    margin: 0;
+    color: var(--secondary-color);
+}
+
+.btn-about-contact {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+.btn-about-contact:hover {
+    background-color: rgba(97, 218, 251, 0.1);
+}

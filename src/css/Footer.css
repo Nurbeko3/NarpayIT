@@ -1,0 +1,96 @@
+/* src/css/Footer.css */
+
+.footer-container {
+    background-color: #111111; /* Juda to'q fon - Asosiy fonga qaraganda qoraroq */
+    color: #b0b0b0;
+    padding: 60px 50px 20px 50px;
+    border-top: 3px solid var(--primary-color); /* Yuqoridan ajratuvchi chiziq */
+}
+
+.footer-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    /* 4 ta ustunni moslashuvchan (minmax) qilib joylashtirish */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+/* Umumiy sarlavhalar stillari */
+.footer-grid h4 {
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(97, 218, 251, 0.2);
+    padding-bottom: 5px;
+    width: fit-content;
+}
+
+/* 1. Logotip va qisqacha ma'lumot */
+.footer-about .logo a {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-about p {
+    margin-top: 15px;
+    line-height: 1.7;
+    font-size: 0.9em;
+}
+
+/* 2 va 3. Havolalar */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #b0b0b0;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color); /* Hover effekti */
+    padding-left: 5px; /* Kichik animatsiya */
+}
+
+/* 4. Aloqa va Ijtimoiy tarmoqlar */
+.footer-contact p {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a i {
+    font-size: 1.8em;
+    color: #b0b0b0;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover i {
+    color: var(--primary-color);
+}
+
+/* Pastki chiziq (Copyright) */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 0.85em;
+    color: #888;
+}

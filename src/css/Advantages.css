@@ -1,0 +1,85 @@
+/* src/css/Advantages.css (O'zgarmagan, chunki u 6 ta elementni qo'llab-quvvatlaydi) */
+
+.advantages-container {
+    padding: 80px 50px;
+    background-color: var(--header-bg); 
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--primary-color); 
+}
+
+.section-subtitle {
+    font-size: 1.2em;
+    margin-bottom: 50px;
+    color: #cccccc;
+}
+
+/* Afzalliklar kartochkalari uchun joylashtirish (Grid) */
+.advantages-grid {
+    /* Bu stil 6 ta elementni 3 ustunga (kattaroq ekranlarda) avtomatik joylashtiradi */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Har bir afzallik kartochkasi */
+.advantage-card {
+    background-color: #1a1a1a; 
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid transparent; 
+    cursor: pointer;
+}
+
+.advantage-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(97, 218, 251, 0.15); 
+    border-top-color: var(--primary-color);
+}
+
+.card-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.card-description {
+    font-size: 1em;
+    color: #b0b0b0;
+}
+
+/* Tugma */
+.advantages-action {
+    margin-top: 20px;
+}
+
+.btn-main-action {
+    background-color: var(--primary-color);
+    color: #282c34;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.btn-main-action:hover {
+    background-color: #3bafc7;
+}

@@ -1,0 +1,91 @@
+/* src/components/Header.css */
+
+/* Umumiy header konteyneri stillari */
+.header-container {
+    display: flex; /* Elementlarni qator bo'ylab joylashtirish */
+    justify-content: space-between; /* Bo'sh joyni logotip, navigatsiya va tugmalar orasiga teng taqsimlash */
+    align-items: center; /* Vertikal o'q bo'yicha markazlashtirish */
+    padding: 15px 50px; /* Yuqori/pastki va o'ng/chap chetlardan ichki bo'shliq */
+    background-color: #282c34; /* To'q rangli fon (VS Code standart ranglariga yaqin) */
+    color: white; /* Matn rangi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Yengil soya effekti */
+    position: sticky; /* Oynaning tepasida qotirish */
+    top: 0;
+    z-index: 1000; /* Boshqa elementlardan yuqori bo'lishini ta'minlash */
+}
+
+/* Logotip stillari */
+.logo a {
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: white; /* Matn rangi */
+}
+
+.logo-text {
+    color: #61dafb; /* React rangiga o'xshash och ko'k/siyan rang */
+}
+
+.logo-highlight {
+    color: white;
+}
+
+/* Navigatsiya menuyusi stillari */
+.nav-menu ul {
+    list-style: none; /* Markerlarni olib tashlash */
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-left: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #61dafb; /* Hover effekti */
+}
+
+/* Tugmalar stillari */
+.auth-buttons {
+    display: flex;
+    gap: 15px; /* Tugmalar orasidagi bo'shliq */
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-login {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.btn-login:hover {
+    background-color: white;
+    color: #282c34;
+}
+
+.btn-signup {
+    background-color: #61dafb; /* Asosiy urg'u rangi */
+    color: #282c34;
+    border: 1px solid #61dafb;
+}
+
+.btn-signup:hover {
+    background-color: #3bafc7; /* Biroz to'qroq rang */
+    border-color: #3bafc7;
+}

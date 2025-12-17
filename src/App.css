@@ -1,0 +1,111 @@
+/* src/App.css */
+
+/*
+* ----------------------------------------------------------------------
+* 1. Global Reset va Shriftlar (Fontlar)
+* ----------------------------------------------------------------------
+*/
+
+/* Google Fonts dan zamonaviy shriftlarni import qilish (Poppins) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Global Reset: Brauzerning standart margin/paddinglarini o'chirish */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+/* Saytning asosiy shrifiti, rangi va foni */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #1a1a1a; /* Juda to'q fon (Dark Mode) */
+  color: #f0f0f0; /* Oqish matn rangi */
+  min-height: 100vh; /* Sahifa minimal balandligi */
+  overflow-x: hidden; /* Gorizontal scroll barlarini oldini olish */
+}
+
+/* Saytning asosiy ranglari (CSS Custom Properties) */
+:root {
+  --primary-color: #61dafb; /* Urg'u rangi (Siyan/React ko'k) */
+  --secondary-color: #f0f0f0; /* Oq/yorug' matn rangi */
+  --dark-bg: #1a1a1a; /* Asosiy fon */
+  --header-bg: #282c34; /* Header/Komponent fon */
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+}
+
+/*
+* ----------------------------------------------------------------------
+* 2. Asosiy Konteyner (Qisilish Muammosi Hal Qilingan joy)
+* ----------------------------------------------------------------------
+*/
+
+#root {
+  /* Header va Hero to'liq kenglikda bo'lishi uchun barcha cheklovlarni olib tashlaymiz */
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left; 
+}
+
+main {
+  /* Faqat main ichidagi kontent (Advantages, Courses) uchun markaziy konteyner */
+  max-width: 1280px;
+  margin: 0 auto; /* Kontentni markazga joylashtirish */
+  padding-bottom: 50px; /* Footerdan oldin bo'sh joy qoldirish */
+}
+
+
+/*
+* ----------------------------------------------------------------------
+* 3. Tipografiya (Sarlavhalar)
+* ----------------------------------------------------------------------
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--secondary-color);
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.2em;
+  text-align: center; 
+  margin-top: 50px;
+}
+
+/*
+* ----------------------------------------------------------------------
+* 4. Havolalar va Tugmalar (Global stillar)
+* ----------------------------------------------------------------------
+*/
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #90ee90; /* Yaxshiroq hover rangi */
+}
+
+.btn {
+  /* Barcha tugmalar uchun umumiy stil asoslari */
+  cursor: pointer;
+  border: none;
+  font-size: 1em;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  white-space: nowrap; /* Matnni bir qatorda ushlab turish */
+}
+html {
+  /* Sayt ichidagi barcha havolalar bo'ylab silliq o'tishni ta'minlaydi */
+  scroll-behavior: smooth;
+}
