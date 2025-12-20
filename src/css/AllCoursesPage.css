@@ -20,11 +20,9 @@
   margin-bottom: 50px;
 }
 
-/* Kurslar ro'yxati uchun Grid tizimi */
 .course-list-grid {
   display: grid;
   gap: 30px;
-  /* Ro'yxatni torroq qilamiz, chunki bu alohida sahifa */
   grid-template-columns: 1fr;
   max-width: 900px;
   margin: 0 auto 50px auto;
@@ -63,7 +61,7 @@
   font-weight: 600;
   margin-top: 5px;
   margin-bottom: 5px;
-  color: var(--primary-color); 
+  color: var(--primary-color);
 }
 
 .list-description {
@@ -83,14 +81,15 @@
   color: #1a1a1a;
   font-weight: 700;
   border-radius: 5px;
-  white-space: nowrap; 
+  white-space: nowrap;
   transition: opacity 0.3s;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .list-btn-enroll:hover {
   opacity: 0.9;
 }
-
 
 .page-footer-action {
   padding: 30px;
@@ -115,8 +114,76 @@
   border-radius: 5px;
   font-weight: 600;
   transition: background-color 0.3s;
+  text-decoration: none;
 }
 
 .btn-secondary-contact:hover {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1024px) {
+  .all-courses-container {
+    padding: 50px 30px;
+  }
+
+  .page-title {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .all-courses-container {
+    padding: 40px 20px;
+  }
+
+  .list-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .list-content {
+    padding-right: 0;
+  }
+
+  .list-meta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .list-meta span {
+    margin-right: 0;
+  }
+
+  .list-btn-enroll {
+    width: 100%;
+  }
+
+  .page-footer-action {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 2em;
+  }
+
+  .page-subtitle {
+    font-size: 1.1em;
+  }
+
+  .list-title {
+    font-size: 1.3em;
+  }
+
+  .list-level {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

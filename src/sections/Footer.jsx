@@ -52,7 +52,7 @@ function Footer() {
             📞 <a href="tel:+998994548065">+998 99 454 80 65</a>
           </p>
           <p>
-            ✉️ <a href="mailto:info@itsiteacademy.uz">info@itsiteacademy.uz</a>
+            ✉️ <a href="mailto:itnarpay@gmail.com">itnarpay@gmail.com</a>
           </p>
         </div>
       </div>

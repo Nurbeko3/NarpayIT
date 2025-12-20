@@ -1,6 +1,5 @@
-
 import React, { useState } from "react";
-import "../css/Contact.css"; 
+import "../css/Contact.css";
 
 const sendContactToTelegram = async (formData) => {
   const BOT_TOKEN = "YOUR_BOT_TOKEN";
@@ -98,7 +97,7 @@ function ContactSection() {
               <span style={{ fontWeight: "900" }}>&#9993;</span>{" "}
             </div>{" "}
             <div>
-              <h4>Email</h4> <p>info@itsiteacademy.uz</p>{" "}
+              <h4>Email</h4> <p>itnarpay@gmail.com</p>{" "}
             </div>{" "}
           </div>
           {/* Manzil Icon joyi: 📍 o'rniga joy ramzi */}{" "}
@@ -123,17 +122,12 @@ function ContactSection() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {/* TELEGRAM: "✈️" o'rniga "T" harfi */}{" "}
               <div
                 className="social-icon telegram-icon"
                 style={{ fontSize: "1.4em", fontWeight: "bold" }}
               >
                 T
               </div>{" "}
-            </a>{" "}
-            <a href="#facebook" target="_blank" rel="noopener noreferrer">
-              {/* FACEBOOK: "f" saqlanib qoladi (minimalist) */}
-              <div className="social-icon facebook-icon">f</div>{" "}
             </a>{" "}
           </div>{" "}
         </div>

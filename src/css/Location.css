@@ -1,3 +1,5 @@
+/* src/css/Location.css */
+
 .location-container {
   padding: 80px 50px;
   background-color: var(--header-bg);
@@ -91,8 +93,64 @@
   font-weight: 700;
   transition: background-color 0.3s;
   display: inline-block;
+  text-decoration: none;
+  text-align: center;
 }
 
 .btn-get-directions:hover {
   background-color: #3bafc7;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1024px) {
+  .location-container {
+    padding: 60px 30px;
+  }
+
+  .location-grid {
+    grid-template-columns: 1fr; /* Ikki ustun bitta ustunga aylanadi */
+    gap: 30px;
+  }
+
+  .map-wrapper {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2em;
+  }
+
+  .section-subtitle {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+  }
+
+  .location-info {
+    padding: 20px;
+  }
+
+  .map-wrapper {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .location-container {
+    padding: 40px 15px;
+  }
+
+  .section-title {
+    font-size: 1.8em;
+  }
+
+  .map-wrapper {
+    height: 300px;
+  }
+
+  .btn-get-directions {
+    width: 100%; /* Tugma mobil qurilmada to'liq kenglikda */
+  }
 }

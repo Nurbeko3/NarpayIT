@@ -7,18 +7,18 @@
 */
 
 /* Google Fonts dan zamonaviy shriftlarni import qilish (Poppins) */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 /* Global Reset: Brauzerning standart margin/paddinglarini o'chirish */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 /* Saytning asosiy shrifiti, rangi va foni */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.6;
   background-color: #1a1a1a; /* Juda to'q fon (Dark Mode) */
   color: #f0f0f0; /* Oqish matn rangi */
@@ -32,7 +32,7 @@ body {
   --secondary-color: #f0f0f0; /* Oq/yorug' matn rangi */
   --dark-bg: #1a1a1a; /* Asosiy fon */
   --header-bg: #282c34; /* Header/Komponent fon */
-  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /*
@@ -46,7 +46,7 @@ body {
   max-width: none;
   margin: 0;
   padding: 0;
-  text-align: left; 
+  text-align: left;
 }
 
 main {
@@ -56,14 +56,18 @@ main {
   padding-bottom: 50px; /* Footerdan oldin bo'sh joy qoldirish */
 }
 
-
 /*
 * ----------------------------------------------------------------------
 * 3. Tipografiya (Sarlavhalar)
 * ----------------------------------------------------------------------
 */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--secondary-color);
   font-weight: 700;
   margin-bottom: 0.5em;
@@ -75,7 +79,7 @@ h1 {
 
 h2 {
   font-size: 2.2em;
-  text-align: center; 
+  text-align: center;
   margin-top: 50px;
 }
 
@@ -108,4 +112,62 @@ a:hover {
 html {
   /* Sayt ichidagi barcha havolalar bo'ylab silliq o'tishni ta'minlaydi */
   scroll-behavior: smooth;
+}
+/* 1. Katta ekranlar va Planşetlar uchun (1024px gacha) */
+@media (max-width: 1024px) {
+  main {
+    max-width: 95%; /* Chetda ozgina joy qolishi uchun */
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 2.5em; /* Sarlavha biroz kichrayadi */
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+}
+
+/* 2. Kichik planşetlar va katta telefonlar uchun (768px gacha) */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px; /* Umumiy matn hajmini biroz kamaytirish */
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+    margin-top: 30px;
+  }
+
+  /* Mobil qurilmalarda paddinglarni kamaytiramiz */
+  main {
+    padding: 0 15px;
+  }
+}
+
+/* 3. Mobil telefonlar uchun (480px gacha) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .btn {
+    font-size: 0.9em;
+    padding: 10px 15px; /* Tugmalar hajmi moslashadi */
+  }
+
+  /* Gorizontal scrollingni qat'iy cheklash */
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
 }
