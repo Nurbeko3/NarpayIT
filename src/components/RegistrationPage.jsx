@@ -18,8 +18,8 @@ const unslugify = (slug) => {
 
 // Telegram botga yuborish mantig'i
 const sendToTelegram = async (formData) => {
-  const BOT_TOKEN = "8577440616:AAEo-w3bW_LrLISNy8gDnH_ndPVUp96ySxM";
-  const CHAT_ID = "7349754297";
+  const BOT_TOKEN = "8446382414:AAFGRuMBTCL6VYyUwNc0mu8bxM3mb5PXf4o";
+  const CHAT_ID = "8090183108";
 
   // Template literal endi to'g'ri formatlangan
   const message = `Yangi Kursga Ro'yxatdan O'tish!

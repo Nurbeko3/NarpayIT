@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "../css/Contact.css";
 
 const sendContactToTelegram = async (formData) => {
-  const BOT_TOKEN = "YOUR_BOT_TOKEN";
-  const CHAT_ID = "YOUR_CHAT_ID";
+  const BOT_TOKEN = "8446382414:AAFGRuMBTCL6VYyUwNc0mu8bxM3mb5PXf4o";
+  const CHAT_ID = "8090183108";
 
   const message = `
 *Yangi Aloqa Xabari!*
