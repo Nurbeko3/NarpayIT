@@ -3,7 +3,7 @@ import "../css/Contact.css";
 
 const sendContactToTelegram = async (formData) => {
   const BOT_TOKEN = "8446382414:AAFGRuMBTCL6VYyUwNc0mu8bxM3mb5PXf4o";
-  const CHAT_ID = "8090183108";
+  const CHAT_ID = "2015144654";
 
   const message = `
 *Yangi Aloqa Xabari!*
