@@ -43,26 +43,22 @@ function AdvantagesSection() {
 
   return (
     <section id="advantages" className="advantages-container">
-      <h2 className="section-title">Nega aynan IT Academy?</h2>{" "}
-      <p className="section-subtitle">
-        Sizning muvaffaqiyatingiz bizning ustuvor vazifamizdir.
-      </p>{" "}
+      <h2 className="section-title">Nega aynan IT Academy?</h2>
+      <p className="section-subtitle">Sizning muvaffaqiyatingiz bizning ustuvor vazifamizdir.</p>
       <div className="advantages-grid">
-        {" "}
         {advantages.map((advantage, index) => (
           <div key={index} className="advantage-card">
             <div className="card-icon">{advantage.icon}</div>
-            <h3 className="card-title">{advantage.title}</h3>{" "}
-            <p className="card-description">{advantage.description}</p>{" "}
+            <h3 className="card-title">{advantage.title}</h3>
+            <p className="card-description">{advantage.description}</p>
           </div>
-        ))}{" "}
-      </div>{" "}
+        ))}
+      </div>
       <div className="advantages-action">
-        {" "}
         <a href="#courses" className="btn btn-main-action">
-          Kurslarimiz Haqida Batafsil{" "}
-        </a>{" "}
-      </div>{" "}
+          Kurslarimiz Haqida Batafsil
+        </a>
+      </div>
     </section>
   );
 }

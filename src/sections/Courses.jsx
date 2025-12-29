@@ -1,5 +1,3 @@
-// src/sections/Courses.jsx
-
 import { Link } from "react-router-dom";
 import "../css/Courses.css";
 
@@ -20,7 +18,7 @@ function CoursesSection() {
         "MS Office, Internetdan samarali foydalanish, fayl tizimi va asosiy kompyuter ko'nikmalarini 0 dan boshlab o'rganing. Har qanday ish uchun zaruriy asos.",
       duration: "1 Oy",
       level: "Beginner",
-      color: "#f0ad4e", 
+      color: "#f0ad4e",
     },
     {
       id: 2,
@@ -30,7 +28,7 @@ function CoursesSection() {
         "Adobe Photoshop, Illustrator va InDesign da ishlashni o'rganing. Logotip, poster, veb elementlar yaratish va ranglar nazariyasi.",
       duration: "2 Oy",
       level: "Intermediate",
-      color: "#d9534f", 
+      color: "#d9534f",
     },
     {
       id: 3,
@@ -40,7 +38,7 @@ function CoursesSection() {
         "Kengaytirilgan Excel funksiyalari, bulutli xizmatlar bilan ishlash va ofis jarayonlarini avtomatlashtirish bo'yicha chuqur kurs.",
       duration: "1 Oy",
       level: "Advanced",
-      color: "#5cb85c", 
+      color: "#5cb85c",
     },
     {
       id: 4,
@@ -50,7 +48,7 @@ function CoursesSection() {
         "HTML, CSS, JavaScript dan boshlab React, Vite va Git texnologiyalarini o'rganib, to'liq ishlaydigan professional veb-saytlar yaratishni o'zlashtiring.",
       duration: "8 Oy",
       level: "Professional",
-      color: "#9900cc", 
+      color: "#9900cc",
     },
   ];
 
@@ -58,22 +56,14 @@ function CoursesSection() {
     <section id="courses" className="courses-container">
       <h2 className="section-title">Biz taklif qilayotgan kurslar</h2>
       <p className="section-subtitle">
-        Sertifikatlashtirilgan dasturlar orqali o'z sohangiz mutaxassisi
-        bo'ling.
+        Sertifikatlashtirilgan dasturlar orqali o'z sohangiz mutaxassisi bo'ling.
       </p>
 
-      {/* Endi gridda 4 ta kurs bo'ladi, bu CSS moslashuvchanligini talab qiladi */}
       <div className="courses-grid">
         {courses.map((course) => (
           <div key={course.id} className="course-card-wrapper">
-            <div
-              className="course-card"
-              style={{ borderTopColor: course.color }}
-            >
-              <span
-                className="course-level"
-                style={{ backgroundColor: course.color }}
-              >
+            <div className="course-card" style={{ borderTopColor: course.color }}>
+              <span className="course-level" style={{ backgroundColor: course.color }}>
                 {course.level}
               </span>
 
@@ -96,7 +86,7 @@ function CoursesSection() {
               </Link>
             </div>
           </div>
-        ))}{" "}
+        ))}
       </div>
       <div className="courses-footer-action">
         <p>Barcha yo'nalishlarimizni ko'rishni xohlaysizmi?</p>

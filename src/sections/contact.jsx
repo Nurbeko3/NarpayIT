@@ -69,75 +69,56 @@ function ContactSection() {
 
   return (
     <section id="contact" className="contact-container">
-      <h2 className="section-title">Biz Bilan Bog'laning</h2>{" "}
+      <h2 className="section-title">Biz Bilan Bog'laning</h2>
       <p className="section-subtitle">
-        Savollaringiz bormi yoki batafsil ma'lumot kerakmi? Biz har doim
-        aloqadamiz!{" "}
-      </p>{" "}
+        Savollaringiz bormi yoki batafsil ma'lumot kerakmi? Biz har doim aloqadamiz!
+      </p>
       <div className="contact-grid">
-        {/* 1. Kontakt Ma'lumotlari */}{" "}
         <div className="contact-info">
-          <h3>Aloqa Ma'lumotlari</h3>{" "}
-          {/* Telefon Icon joyi: 📞 o'rniga telefon ramzi */}{" "}
+          <h3>Aloqa Ma'lumotlari</h3>
           <div className="info-item">
-            {" "}
             <div className="info-icon">
-              {/* 📞 Telefon ikonkasini oddiy ramz bilan almashtiramiz */}
-              <span style={{ fontWeight: "900" }}>&#9742;</span>{" "}
-            </div>{" "}
+              <span style={{ fontWeight: "900" }}>&#9742;</span>
+            </div>
             <div>
-              <h4>Telefon</h4> <p>+998 99 454 80 65</p>{" "}
-            </div>{" "}
+              <h4>Telefon</h4> <p>+998 99 454 80 65</p>
+            </div>
           </div>
-          {/* Email Icon joyi: ✉️ o'rniga pochta ramzi */}{" "}
           <div className="info-item">
-            {" "}
             <div className="info-icon">
-              {/* ✉️ Pochta ikonkasini oddiy ramz bilan almashtiramiz */}
-              <span style={{ fontWeight: "900" }}>&#9993;</span>{" "}
-            </div>{" "}
+              <span style={{ fontWeight: "900" }}>&#9993;</span>
+            </div>
             <div>
-              <h4>Email</h4> <p>itnarpay@gmail.com</p>{" "}
-            </div>{" "}
+              <h4>Email</h4> <p>itnarpay@gmail.com</p>
+            </div>
           </div>
-          {/* Manzil Icon joyi: 📍 o'rniga joy ramzi */}{" "}
           <div className="info-item">
-            {" "}
             <div className="info-icon">
-              {/* 📍 Manzil ikonkasini oddiy ramz bilan almashtiramiz */}
-              <span style={{ fontWeight: "900" }}>&#128205;</span>{" "}
-            </div>{" "}
+              <span style={{ fontWeight: "900" }}>&#128205;</span>
+            </div>
             <div>
               <h4>Manzil</h4>{" "}
               <p>
-                Samarqand viloyati, Narpay tumani Imom Buhoriy ko'chasi 114-uy.
-                Mo'ljal: Eski 29-kollej{" "}
-              </p>{" "}
-            </div>{" "}
-          </div>{" "}
+                Samarqand viloyati, Narpay tumani Imom Buhoriy ko'chasi 114-uy. Mo'ljal: Eski
+                29-kollej
+              </p>
+            </div>
+          </div>
           <div className="social-links">
-            {" "}
-            <a
-              href="https://t.me/uzsnur19805"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://t.me/uzsnur19805" target="_blank" rel="noopener noreferrer">
               <div
                 className="social-icon telegram-icon"
                 style={{ fontSize: "1.4em", fontWeight: "bold" }}
               >
                 T
-              </div>{" "}
-            </a>{" "}
-          </div>{" "}
+              </div>
+            </a>
+          </div>
         </div>
-        {/* 2. Aloqa Formasi (o'zgarmadi) */}{" "}
         <div className="contact-form-wrapper">
-          {" "}
           <form onSubmit={handleSubmit} className="contact-form">
-            <h3>Murojaat Yuborish</h3>{" "}
+            <h3>Murojaat Yuborish</h3>
             <div className="form-group">
-              {" "}
               <input
                 type="text"
                 name="fullName"
@@ -145,10 +126,9 @@ function ContactSection() {
                 onChange={handleChange}
                 placeholder="To'liq Ism"
                 required
-              />{" "}
-            </div>{" "}
+              />
+            </div>
             <div className="form-group">
-              {" "}
               <input
                 type="tel"
                 name="phone"
@@ -156,10 +136,9 @@ function ContactSection() {
                 onChange={handleChange}
                 placeholder="Telefon Raqam"
                 required
-              />{" "}
-            </div>{" "}
+              />
+            </div>
             <div className="form-group animated-input">
-              {" "}
               <input
                 type="text"
                 name="telegram"
@@ -167,13 +146,9 @@ function ContactSection() {
                 onChange={handleChange}
                 placeholder="@Telegram Username (Ixtiyoriy)"
               />
-              {/* Creative animation elementi */}{" "}
-              <div className="telegram-hint">
-                @ kiriting (Aloqa uchun muhim){" "}
-              </div>{" "}
-            </div>{" "}
+              <div className="telegram-hint">@ kiriting (Aloqa uchun muhim)</div>
+            </div>
             <div className="form-group">
-              {" "}
               <textarea
                 name="question"
                 value={formData.question}
@@ -181,30 +156,23 @@ function ContactSection() {
                 rows="4"
                 placeholder="Savolingizni yozing..."
                 required
-              />{" "}
-            </div>{" "}
+              />
+            </div>
             <button
               type="submit"
               className="btn btn-contact-submit"
               disabled={status === "Yuborilmoqda..."}
             >
-              {" "}
-              {status === "Yuborilmoqda..."
-                ? "Yuborilmoqda..."
-                : "Xabarni Yuborish"}{" "}
-            </button>{" "}
+              {status === "Yuborilmoqda..." ? "Yuborilmoqda..." : "Xabarni Yuborish"}
+            </button>
             {status && (
-              <p
-                className={`form-status ${
-                  status.startsWith("✅") ? "success" : "error"
-                }`}
-              >
-                {status}{" "}
+              <p className={`form-status ${status.startsWith("✅") ? "success" : "error"}`}>
+                {status}
               </p>
-            )}{" "}
-          </form>{" "}
-        </div>{" "}
-      </div>{" "}
+            )}
+          </form>
+        </div>
+      </div>
     </section>
   );
 }

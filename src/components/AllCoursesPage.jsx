@@ -1,7 +1,5 @@
-// src/components/AllCoursesPage.jsx
-
 import { Link } from "react-router-dom";
-import "../css/AllCoursesPage.css"; // Stil faylini import qilish
+import "../css/AllCoursesPage.css";
 
 const slugify = (text) => {
   return text
@@ -51,7 +49,7 @@ function AllCoursesPage() {
       duration: "6 Oy",
       level: "Professional",
       color: "#9900cc",
-    }, // Yangi kurs qo'shildi
+    },
   ];
 
   return (
@@ -66,10 +64,7 @@ function AllCoursesPage() {
       <div className="course-list-grid">
         {courses.map((course) => (
           <div key={course.id} className="list-card">
-            <span
-              className="list-level"
-              style={{ backgroundColor: course.color }}
-            >
+            <span className="list-level" style={{ backgroundColor: course.color }}>
               {course.level}
             </span>
 
@@ -97,8 +92,6 @@ function AllCoursesPage() {
       <div className="page-footer-action">
         <p>Savollaringiz bormi? Biz bilan bog'laning!</p>
         <Link to="/#contact" className="btn btn-secondary-contact">
-          {" "}
-          {/* /#contact qilib to'g'irlandi */}
           Aloqa
         </Link>
       </div>

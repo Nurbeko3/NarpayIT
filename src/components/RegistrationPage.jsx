@@ -1,10 +1,7 @@
-// src/components/RegistrationPage.jsx (yoki sections/RegistrationPage.jsx)
-
 import { useState } from "react";
-import { useParams } from "react-router-dom"; // URL parametrlarini olish uchun qo'shildi
+import { useParams } from "react-router-dom";
 import "../css/RegistrationPage.css";
 
-// URL dagi slugni o'qiydigan funksiya (oldin berilgan)
 const unslugify = (slug) => {
   if (!slug) return "Tanlangan Kurs (Avtomatik)";
   const readable = slug.replace(/-/g, " ");
@@ -16,12 +13,10 @@ const unslugify = (slug) => {
     .join(" ");
 };
 
-// Telegram botga yuborish mantig'i
 const sendToTelegram = async (formData) => {
   const BOT_TOKEN = "8446382414:AAFGRuMBTCL6VYyUwNc0mu8bxM3mb5PXf4o";
   const CHAT_ID = "2015144654";
 
-  // Template literal endi to'g'ri formatlangan
   const message = `Yangi Kursga Ro'yxatdan O'tish!
 ---------------------------------
 Foydalanuvchi: ${formData.fullName}
@@ -49,11 +44,7 @@ Izoh: ${formData.notes || "Yo'q"}
       return true;
     } else {
       const errorBody = await response.json();
-      console.error(
-        "Telegram API xatosi:",
-        response.status,
-        response.statusText
-      );
+      console.error("Telegram API xatosi:", response.status, response.statusText);
       console.error("Telegram xato javobi:", errorBody);
       return false;
     }
@@ -92,9 +83,7 @@ function RegistrationPage() {
     const success = await sendToTelegram(formData);
 
     if (success) {
-      setStatus(
-        "✅ Ro'yxatdan o'tish muvaffaqiyatli! Tez orada siz bilan bog'lanamiz."
-      );
+      setStatus("✅ Ro'yxatdan o'tish muvaffaqiyatli! Tez orada siz bilan bog'lanamiz.");
       setFormData({
         fullName: "",
         phone: "",
@@ -160,17 +149,11 @@ function RegistrationPage() {
             className="btn btn-submit-form"
             disabled={status === "Yuborilmoqda..."}
           >
-            {status === "Yuborilmoqda..."
-              ? "Yuborilmoqda..."
-              : "Ro'yxatdan O'tishni Yakunlash"}
+            {status === "Yuborilmoqda..." ? "Yuborilmoqda..." : "Ro'yxatdan O'tishni Yakunlash"}
           </button>
 
           {status && (
-            <p
-              className={`form-status ${
-                status.startsWith("✅") ? "success" : "error"
-              }`}
-            >
+            <p className={`form-status ${status.startsWith("✅") ? "success" : "error"}`}>
               {status}
             </p>
           )}
@@ -180,4 +163,4 @@ function RegistrationPage() {
   );
 }
 
-export default RegistrationPage; // Export default qo'shilgan
+export default RegistrationPage;

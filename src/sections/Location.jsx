@@ -2,11 +2,7 @@ import React from "react";
 import "../css/Location.css";
 
 function LocationSection() {
-  // Yandex Maps iframe manbasini to'g'ridan-to'g'ri joylashtirish
-  // Xavfsizlik sababli React da ba'zi iframe xususiyatlari cheklanishi mumkin, ammo bu odatiy usul.
   const mapIframeSrc = "https://yandex.uz/map-widget/v1/-/CLsvAHjf";
-
-  // Xaritani to'liq saytga moslashtirish uchun bizning stilimiz bilan birga ishlatiladi.
 
   return (
     <section id="location" className="location-container">
@@ -16,9 +12,7 @@ function LocationSection() {
       </p>
 
       <div className="location-grid">
-        {/* 1. Xarita Joylashuvi (Embedded Map) */}
         <div className="map-wrapper">
-          {/* Yandex Maps iframe kodini joylashtirish */}
           <iframe
             src={mapIframeSrc}
             width="100%"
@@ -30,7 +24,6 @@ function LocationSection() {
           ></iframe>
         </div>
 
-        {/* 2. Kontakt Ma'lumotlari va Ish Vaqti */}
         <div className="location-info">
           <h3>Aloqa & Ish Vaqti</h3>
 
@@ -38,10 +31,9 @@ function LocationSection() {
             <div className="info-icon">📍</div>
             <div>
               <h4>Manzilimiz</h4>
-              {/* Joylashuvni yanada aniqroq ko'rsatamiz */}
               <p>
-                Samarqand viloyati, Narpay tumani Imom Buhoriy ko'chasi 114-uy.
-                Mo'ljal: Eski 29-kollej
+                Samarqand viloyati, Narpay tumani Imom Buhoriy ko'chasi 114-uy. Mo'ljal: Eski
+                29-kollej
               </p>
             </div>
           </div>

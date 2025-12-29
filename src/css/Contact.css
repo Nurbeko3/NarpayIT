@@ -149,7 +149,9 @@
   color: var(--dark-bg);
   border-radius: 5px;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
   font-size: 0.85em;
   pointer-events: none;
   font-weight: 500;
