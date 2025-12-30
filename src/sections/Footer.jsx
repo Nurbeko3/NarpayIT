@@ -28,13 +28,19 @@ function Footer() {
               <Link to="/">Bosh Sahifa</Link>
             </li>
             <li>
-              <Link to="/#courses">Kurslar</Link>
+              <a href="/#courses">Kurslar</a>
+            </li>
+            <li>
+              <Link to="/certificates">Sertifikatlar</Link>
             </li>
             <li>
               <Link to="/all-courses">Katalog</Link>
             </li>
             <li>
-              <Link to="/#contact">Aloqa</Link>
+              <a href="/#contact">Aloqa</a>
+            </li>
+            <li>
+              <a href="/#location">Manzil</a>
             </li>
           </ul>
         </div>
@@ -51,7 +57,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {currentYear} IT Site Academy. Barcha huquqlar himoyalangan.</p>
+        <p>&copy; {currentYear} IT Academy. Barcha huquqlar himoyalangan.</p>
       </div>
     </footer>
   );

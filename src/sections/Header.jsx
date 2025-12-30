@@ -18,7 +18,7 @@ function Header() {
             <Link to="/about">Biz Haqimizda</Link>
           </li>
           <li>
-            <Link to="/#certificates">Sertifikatlar</Link>
+            <Link to="/certificates">Sertifikatlar</Link>
           </li>
           <li>
             <Link to="/#teachers">O'qituvchilar</Link>

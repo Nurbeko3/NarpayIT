@@ -20,19 +20,21 @@
 body {
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
-  background-color: #1a1a1a; /* Juda to'q fon (Dark Mode) */
-  color: #f0f0f0; /* Oqish matn rangi */
-  min-height: 100vh; /* Sahifa minimal balandligi */
-  overflow-x: hidden; /* Gorizontal scroll barlarini oldini olish */
+  background:
+    radial-gradient(circle at top left, #0f172a 0, #020617 40%, #000000 100%),
+    #020617;
+  color: #f0f0f0;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Saytning asosiy ranglari (CSS Custom Properties) */
 :root {
-  --primary-color: #61dafb; /* Urg'u rangi (Siyan/React ko'k) */
-  --secondary-color: #f0f0f0; /* Oq/yorug' matn rangi */
-  --dark-bg: #1a1a1a; /* Asosiy fon */
-  --header-bg: #282c34; /* Header/Komponent fon */
-  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --primary-color: #38bdf8; /* Yorqin IT ko'k (Sky) */
+  --secondary-color: #f9fafb;
+  --dark-bg: #020617; /* Asosiy fon (chuqur dark) */
+  --header-bg: #020617; /* Header/Komponent fon */
+  --box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);
 }
 
 /*

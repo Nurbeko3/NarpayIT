@@ -10,6 +10,8 @@ import Footer from "./sections/Footer";
 import RegistrationPage from "./components/RegistrationPage";
 import AllCoursesPage from "./components/AllCoursesPage";
 import AboutSection from "./sections/About";
+import Certificates from "./sections/Certificates";
+
 const HomeLayout = () => (
   <>
     <Hero />
@@ -28,6 +30,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeLayout />} />
           <Route path="/about" element={<AboutSection />} />
+          <Route path="/certificates" element={<Certificates />} />
           <Route path="/register/:courseSlug" element={<RegistrationPage />} />
           <Route path="/all-courses" element={<AllCoursesPage />} />
           <Route
