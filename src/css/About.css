@@ -1,196 +1,155 @@
-/* src/css/AboutSection.css */
+/* src/css/About.css */
 
 .about-container {
-  padding: 80px 50px;
-  background-color: var(--header-bg);
-  color: var(--secondary-color);
-  text-align: center;
+  padding: 100px 50px;
+  background-color: var(--dark-bg);
+  position: relative;
+  overflow: hidden;
 }
 
 .about-content {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .section-title {
-  font-size: 2.8em;
-  font-weight: 800;
-  margin-bottom: 10px;
+  color: white;
+}
+
+.highlight-text {
   color: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-color), #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .section-subtitle {
-  font-size: 1.2em;
-  margin-bottom: 50px;
-  color: #cccccc;
+  font-size: 1.25em;
+  color: #94a3b8;
   max-width: 800px;
-  margin: 0 auto 50px auto;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+  text-align: center;
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr; /* Desktop uchun */
+  grid-template-columns: 1fr 1.5fr;
   gap: 40px;
-  text-align: left;
+  align-items: stretch;
 }
 
-/* Karta stillari */
 .mission-card,
 .skills-card {
-  background-color: var(--dark-bg);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  background: rgba(30, 41, 59, 0.4);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.mission-card:hover, .skills-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+.card-icon-header {
+  margin-bottom: 25px;
+}
+
+.header-icon {
+  font-size: 3em;
+  color: var(--primary-color);
+  filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.3));
 }
 
 .mission-card h3,
 .skills-card h3 {
-  font-size: 1.5em;
-  font-weight: 700;
+  font-size: 1.8em;
   margin-bottom: 20px;
-  color: var(--primary-color);
+  color: white;
+  line-height: 1.3;
 }
 
 .mission-card p {
+  color: #cad5e2;
   line-height: 1.8;
-  margin-bottom: 25px;
-  color: #cccccc;
+  margin-bottom: 30px;
+  font-size: 1.05em;
 }
 
-/* O'rganiladigan Mavzular Ro'yxati */
 .skills-list {
   list-style: none;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .skills-list li {
-  font-size: 1em;
-  padding: 8px 0;
-  border-bottom: 1px solid #333;
-  color: var(--secondary-color);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #e2e8f0;
+  font-size: 1.05em;
+  padding: 10px;
+  background: rgba(15, 23, 42, 0.3);
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
-.skills-list li:first-child {
-  border-top: 1px solid #333;
-}
-.skills-list li:last-child {
-  border-bottom: none;
+.skills-list li:hover {
+  background: rgba(56, 189, 248, 0.1);
+  transform: translateX(5px);
 }
 
-/* Tugmalar */
+.check-icon {
+  color: var(--primary-color);
+  min-width: 20px;
+  margin-top: 4px;
+}
+
 .btn-about-register {
-  background-color: #5cb85c;
-  color: var(--dark-bg);
-  padding: 12px 25px;
-  border-radius: 6px;
-  font-weight: 700;
-  transition: background-color 0.3s;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--primary-color), #2563eb);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
   text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.4);
 }
 
 .btn-about-register:hover {
-  background-color: #4a9e4a;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.5);
+  filter: brightness(1.1);
 }
 
-.contact-prompt {
-  margin-top: 60px;
-  padding: 30px;
-  background-color: var(--dark-bg);
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-
-.contact-prompt p {
-  font-size: 1.2em;
-  margin: 0;
-  color: var(--secondary-color);
-}
-
-.btn-about-contact {
-  background-color: transparent;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-  padding: 12px 25px;
-  border-radius: 6px;
-  font-weight: 700;
-  transition: background-color 0.3s;
-  text-decoration: none;
-}
-
-.btn-about-contact:hover {
-  background-color: rgba(97, 218, 251, 0.1);
-}
-
-/* * ----------------------------------------------------------------------
-* RESPONSIVE DESIGN (Media Queries)
-* ----------------------------------------------------------------------
-*/
-
-/* Planşetlar uchun (max-width: 1024px) */
+/* Responsive */
 @media (max-width: 1024px) {
-  .about-container {
-    padding: 60px 30px;
-  }
-
   .about-grid {
-    grid-template-columns: 1fr; /* Ikki ustunni bittaga tushirish */
-    gap: 30px;
+    grid-template-columns: 1fr;
   }
-
-  .section-title {
-    font-size: 2.2em;
+  
+  .skills-list {
+    grid-template-columns: 1fr;
   }
 }
 
-/* Mobil qurilmalar uchun (max-width: 768px) */
 @media (max-width: 768px) {
   .about-container {
-    padding: 40px 20px;
+    padding: 60px 20px;
   }
-
+  
   .section-title {
-    font-size: 1.8em;
-  }
-
-  .section-subtitle {
-    font-size: 1.1em;
-    margin-bottom: 30px;
-  }
-
-  .contact-prompt {
-    flex-direction: column; /* Matn va tugmani ustma-ust qilish */
-    text-align: center;
-    gap: 20px;
-  }
-
-  .mission-card,
-  .skills-card {
-    padding: 20px;
-  }
-
-  .mission-card h3,
-  .skills-card h3 {
-    font-size: 1.3em;
-  }
-}
-
-/* Kichik telefonlar uchun (max-width: 480px) */
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 1.5em;
-  }
-
-  .btn-about-register,
-  .btn-about-contact {
-    width: 100%; /* Tugmalarni to'liq kenglikda qilish */
-    text-align: center;
-  }
-
-  .skills-list li {
-    font-size: 0.9em;
+    font-size: 2em;
   }
 }

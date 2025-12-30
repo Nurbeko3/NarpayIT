@@ -11,6 +11,8 @@ import RegistrationPage from "./components/RegistrationPage";
 import AllCoursesPage from "./components/AllCoursesPage";
 import AboutSection from "./sections/About";
 import Certificates from "./sections/Certificates";
+import AdminPanel from "./components/AdminPanel";
+import { CertificateProvider } from "./context/CertificateContext";
 
 const HomeLayout = () => (
   <>
@@ -24,27 +26,30 @@ const HomeLayout = () => (
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <main>
-        <Routes>
-          <Route path="/" element={<HomeLayout />} />
-          <Route path="/about" element={<AboutSection />} />
-          <Route path="/certificates" element={<Certificates />} />
-          <Route path="/register/:courseSlug" element={<RegistrationPage />} />
-          <Route path="/all-courses" element={<AllCoursesPage />} />
-          <Route
-            path="*"
-            element={
-              <div style={{ padding: "100px", textAlign: "center" }}>
-                <h2>404 | Sahifa topilmadi</h2>
-              </div>
-            }
-          />
-        </Routes>
-      </main>
-      <Footer />
-    </Router>
+    <CertificateProvider>
+      <Router>
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomeLayout />} />
+            <Route path="/about" element={<AboutSection />} />
+            <Route path="/certificates" element={<Certificates />} />
+            <Route path="/admin" element={<AdminPanel />} />
+            <Route path="/register/:courseSlug" element={<RegistrationPage />} />
+            <Route path="/all-courses" element={<AllCoursesPage />} />
+            <Route
+              path="*"
+              element={
+                <div style={{ padding: "100px", textAlign: "center" }}>
+                  <h2>404 | Sahifa topilmadi</h2>
+                </div>
+              }
+            />
+          </Routes>
+        </main>
+        <Footer />
+      </Router>
+    </CertificateProvider>
   );
 }
 

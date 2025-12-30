@@ -1,4 +1,13 @@
 import React, { useState } from "react";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaTelegramPlane,
+  FaPaperPlane,
+  FaUser,
+  FaQuestionCircle,
+} from "react-icons/fa";
 import "../css/Contact.css";
 
 const sendContactToTelegram = async (formData) => {
@@ -69,7 +78,9 @@ function ContactSection() {
 
   return (
     <section id="contact" className="contact-container">
-      <h2 className="section-title">Biz Bilan Bog'laning</h2>
+      <h2 className="section-title">
+        Biz Bilan <span className="highlight-text">Bog'laning</span>
+      </h2>
       <p className="section-subtitle">
         Savollaringiz bormi yoki batafsil ma'lumot kerakmi? Biz har doim aloqadamiz!
       </p>
@@ -78,7 +89,7 @@ function ContactSection() {
           <h3>Aloqa Ma'lumotlari</h3>
           <div className="info-item">
             <div className="info-icon">
-              <span style={{ fontWeight: "900" }}>&#9742;</span>
+              <FaPhoneAlt />
             </div>
             <div>
               <h4>Telefon</h4> <p>+998 99 454 80 65</p>
@@ -86,7 +97,7 @@ function ContactSection() {
           </div>
           <div className="info-item">
             <div className="info-icon">
-              <span style={{ fontWeight: "900" }}>&#9993;</span>
+              <FaEnvelope />
             </div>
             <div>
               <h4>Email</h4> <p>itnarpay@gmail.com</p>
@@ -94,10 +105,10 @@ function ContactSection() {
           </div>
           <div className="info-item">
             <div className="info-icon">
-              <span style={{ fontWeight: "900" }}>&#128205;</span>
+              <FaMapMarkerAlt />
             </div>
             <div>
-              <h4>Manzil</h4>{" "}
+              <h4>Manzil</h4>
               <p>
                 Samarqand viloyati, Narpay tumani Imom Buhoriy ko'chasi 114-uy. Mo'ljal: Eski
                 29-kollej
@@ -106,11 +117,8 @@ function ContactSection() {
           </div>
           <div className="social-links">
             <a href="https://t.me/uzsnur19805" target="_blank" rel="noopener noreferrer">
-              <div
-                className="social-icon telegram-icon"
-                style={{ fontSize: "1.4em", fontWeight: "bold" }}
-              >
-                T
+              <div className="social-icon telegram-icon">
+                <FaTelegramPlane />
               </div>
             </a>
           </div>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaClock, FaLayerGroup, FaArrowRight } from "react-icons/fa";
 import "../css/Courses.css";
 
 const slugify = (text) => {
@@ -48,13 +49,15 @@ function CoursesSection() {
         "HTML, CSS, JavaScript dan boshlab React, Vite va Git texnologiyalarini o'rganib, to'liq ishlaydigan professional veb-saytlar yaratishni o'zlashtiring.",
       duration: "8 Oy",
       level: "Professional",
-      color: "#9900cc",
+      color: "#a855f7",
     },
   ];
 
   return (
     <section id="courses" className="courses-container">
-      <h2 className="section-title">Biz taklif qilayotgan kurslar</h2>
+      <h2 className="section-title">
+        Biz taklif qilayotgan <span className="highlight-text">kurslar</span>
+      </h2>
       <p className="section-subtitle">
         Sertifikatlashtirilgan dasturlar orqali o'z sohangiz mutaxassisi bo'ling.
       </p>
@@ -62,7 +65,7 @@ function CoursesSection() {
       <div className="courses-grid">
         {courses.map((course) => (
           <div key={course.id} className="course-card-wrapper">
-            <div className="course-card" style={{ borderTopColor: course.color }}>
+            <div className="course-card">
               <span className="course-level" style={{ backgroundColor: course.color }}>
                 {course.level}
               </span>
@@ -73,8 +76,12 @@ function CoursesSection() {
               <p className="card-description">{course.description}</p>
 
               <div className="card-meta">
-                <span>🗓️ {course.duration}</span>
-                <span>📘 {course.level}</span>
+                <span>
+                  <FaClock /> {course.duration}
+                </span>
+                <span>
+                  <FaLayerGroup /> {course.level}
+                </span>
               </div>
 
               <Link
@@ -82,7 +89,7 @@ function CoursesSection() {
                 className="btn btn-course-enroll"
                 style={{ backgroundColor: course.color }}
               >
-                Hoziroq Yozilish
+                Hoziroq Yozilish <FaArrowRight style={{ marginLeft: "6px" }} />
               </Link>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { FaMapMarkerAlt, FaPhoneAlt, FaClock, FaDirections } from "react-icons/fa";
 import "../css/Location.css";
 
 function LocationSection() {
@@ -6,7 +7,9 @@ function LocationSection() {
 
   return (
     <section id="location" className="location-container">
-      <h2 className="section-title">Bizning Joylashuvimiz</h2>
+      <h2 className="section-title">
+        Bizning <span className="highlight-text">Joylashuvimiz</span>
+      </h2>
       <p className="section-subtitle">
         Oson topish uchun xaritada ko'ring va bizga tashrif buyuring.
       </p>
@@ -28,7 +31,9 @@ function LocationSection() {
           <h3>Aloqa & Ish Vaqti</h3>
 
           <div className="info-item">
-            <div className="info-icon">📍</div>
+            <div className="info-icon">
+              <FaMapMarkerAlt />
+            </div>
             <div>
               <h4>Manzilimiz</h4>
               <p>
@@ -39,7 +44,9 @@ function LocationSection() {
           </div>
 
           <div className="info-item">
-            <div className="info-icon">📞</div>
+            <div className="info-icon">
+              <FaPhoneAlt />
+            </div>
             <div>
               <h4>Telefon</h4>
               <p>+998 99 454 80 65</p>
@@ -47,7 +54,9 @@ function LocationSection() {
           </div>
 
           <div className="info-item">
-            <div className="info-icon">⏰</div>
+            <div className="info-icon">
+              <FaClock />
+            </div>
             <div>
               <h4>Ish Vaqti</h4>
               <p>Dushanba - Shanba: 09:00 dan 18:00 gacha</p>
@@ -61,7 +70,7 @@ function LocationSection() {
             rel="noopener noreferrer"
             className="btn btn-get-directions"
           >
-            Marshrutni Ko'rish
+            Marshrutni Ko'rish <FaDirections style={{ marginLeft: "8px" }} />
           </a>
         </div>
       </div>

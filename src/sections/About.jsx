@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaCheckCircle, FaLaptopHouse, FaArrowRight } from "react-icons/fa";
 import "../css/About.css";
 
 function AboutSection() {
   return (
     <section id="about" className="about-container">
       <div className="about-content">
-        <h2 className="section-title">Biz Haqimizda: IT Academy vazifasi</h2>
+        <h2 className="section-title">
+          Biz Haqimizda: <span className="highlight-text">IT Academy vazifasi</span>
+        </h2>
         <p className="section-subtitle">
           Bizning asosiy vazifamiz – davlat tashkilotlarida ishlovchi xodimlarning raqamli
           savodxonligini zamonaviy talablar darajasiga ko'tarish.
@@ -14,7 +17,10 @@ function AboutSection() {
 
         <div className="about-grid">
           <div className="mission-card">
-            <h3>🖥 Zamonaviy ish yuritish — kompyuterni bilishdan boshlanadi!</h3>
+            <div className="card-icon-header">
+              <FaLaptopHouse className="header-icon" />
+            </div>
+            <h3>Zamonaviy ish yuritish — kompyuterni bilishdan boshlanadi!</h3>
             <p>
               Bizning qisqa muddatli o‘quv kursimiz davlat xizmatchilari uchun kompyuter bilan
               ishlash bo‘yicha tez va samarali bilim berishga qaratilgan. Agar ish jarayonida Word,
@@ -22,24 +28,37 @@ function AboutSection() {
               ishlashni istasangiz — bu kurs aynan siz uchun!
             </p>
             <Link to="/register/kompyuter-bilimini-oshirish" className="btn btn-about-register">
-              Kursga Ro'yxatdan O'tish
+              Kursga Ro'yxatdan O'tish <FaArrowRight />
             </Link>
           </div>
 
           <div className="skills-card">
             <h3>Kursda O'rganiladigan Asosiy Mavzular</h3>
             <ul className="skills-list">
-              <li>✔️ Word’da hujjat tayyorlash</li>
-              <li>✔️ Excel’da jadval, formula va hisobotlar</li>
-              <li>✔️ PDF bilan ishlash va hujjat almashinuvi</li>
-              <li>✔️ Elektron pochta (email) va internetdan to‘g‘ri foydalanish</li>
-              <li>✔️ Qidiruv tizimlari (Google, Yandex) bilan samarali ishlash</li>
               <li>
-                ✔️ Sun’iy intellekt ilovalari (ChatGPT, Gemini, Midjourney va b.) bilan ishlash
+                <FaCheckCircle className="check-icon" /> Word’da hujjat tayyorlash
               </li>
-              <li>✔️ Davlat tizimidagi elektron platformalar va rasmiy saytlar bilan ishlash</li>
               <li>
-                ✔️ Ijtimoiy tarmoqlardan (Instagram, Facebook) professional maqsadlarda foydalanish
+                <FaCheckCircle className="check-icon" /> Excel’da jadval, formula va hisobotlar
+              </li>
+              <li>
+                <FaCheckCircle className="check-icon" /> PDF bilan ishlash va hujjat almashinuvi
+              </li>
+              <li>
+                <FaCheckCircle className="check-icon" /> Elektron pochta va internetdan foydalanish
+              </li>
+              <li>
+                <FaCheckCircle className="check-icon" /> Qidiruv tizimlari (Google) bilan ishlash
+              </li>
+              <li>
+                <FaCheckCircle className="check-icon" /> Sun’iy intellekt (AI) bilan ishlash
+              </li>
+              <li>
+                <FaCheckCircle className="check-icon" /> Davlat xizmatlari portallari bilan ishlash
+              </li>
+              <li>
+                <FaCheckCircle className="check-icon" /> Ijtimoiy tarmoqlardan professional
+                foydalanish
               </li>
             </ul>
           </div>

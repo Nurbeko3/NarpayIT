@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaInfoCircle, FaCertificate, FaChalkboardTeacher, FaUserShield } from "react-icons/fa";
 import "../App.css";
 import "../css/Header.css";
 
@@ -15,13 +16,24 @@ function Header() {
       <nav className="nav-menu">
         <ul>
           <li>
-            <Link to="/about">Biz Haqimizda</Link>
+            <Link to="/about">
+              <FaInfoCircle style={{ marginRight: "5px" }} /> Biz Haqimizda
+            </Link>
           </li>
           <li>
-            <Link to="/certificates">Sertifikatlar</Link>
+            <Link to="/certificates">
+              <FaCertificate style={{ marginRight: "5px" }} /> Sertifikatlar
+            </Link>
           </li>
           <li>
-            <Link to="/#teachers">O'qituvchilar</Link>
+            <Link to="/#teachers">
+              <FaChalkboardTeacher style={{ marginRight: "5px" }} /> O'qituvchilar
+            </Link>
+          </li>
+          <li>
+            <Link to="/admin" style={{ color: "var(--primary-color)", fontWeight: "bold" }}>
+              <FaUserShield style={{ marginRight: "5px" }} /> Admin
+            </Link>
           </li>
         </ul>
       </nav>
