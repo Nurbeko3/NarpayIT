@@ -11,7 +11,8 @@ import RegistrationPage from "./components/RegistrationPage";
 import AllCoursesPage from "./components/AllCoursesPage";
 import AboutSection from "./sections/About";
 import Certificates from "./sections/Certificates";
-import AdminPanel from "./components/AdminPanel";
+import Services from "./sections/Services";
+
 import { CertificateProvider } from "./context/CertificateContext";
 
 const HomeLayout = () => (
@@ -34,7 +35,8 @@ function App() {
             <Route path="/" element={<HomeLayout />} />
             <Route path="/about" element={<AboutSection />} />
             <Route path="/certificates" element={<Certificates />} />
-            <Route path="/admin" element={<AdminPanel />} />
+            <Route path="/xizmatlar" element={<Services />} />
+
             <Route path="/register/:courseSlug" element={<RegistrationPage />} />
             <Route path="/all-courses" element={<AllCoursesPage />} />
             <Route

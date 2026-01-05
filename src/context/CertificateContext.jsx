@@ -6,57 +6,41 @@ export const useCertificates = () => useContext(CertificateContext);
 
 export const CertificateProvider = ({ children }) => {
   const [certificates, setCertificates] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Initial seed data
-    const initialData = [
-      {
-        id: 1,
-        studentName: "Aliyev Akmal",
-        courseName: "Frontend Development",
-        date: "2025-05-20",
-        qrLabel: "Sertifikat ID: 1001",
-      },
-      {
-        id: 2,
-        studentName: "Karimova Dilnoza",
-        courseName: "Graphic Design",
-        date: "2025-06-01",
-        qrLabel: "Sertifikat ID: 1002",
-      },
-      {
-        id: 3,
-        studentName: "Rasulov Jahongir",
-        courseName: "Python Backend",
-        date: "2025-06-15",
-        qrLabel: "Sertifikat ID: 1003",
-      },
-    ];
+    const fetchCertificates = async () => {
+      try {
+        const response = await fetch("https://api-narpay-backend.onrender.com/api/certificates");
+        if (!response.ok) {
+          throw new Error("Failed to fetch certificates");
+        }
+        const result = await response.json();
+        // Check if the response follows the { success: true, data: [...] } structure
+        if (result.success && Array.isArray(result.data)) {
+          setCertificates(result.data);
+        } else if (Array.isArray(result)) {
+          // Fallback in case endpoint just returns an array directly in some future
+          setCertificates(result);
+        } else {
+          // Fallback or empty if format is unexpected
+          console.error("Unexpected API structure:", result);
+          setCertificates([]);
+        }
+      } catch (err) {
+        console.error("Error loading certificates:", err);
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-    const stored = localStorage.getItem("certificates");
-    if (stored) {
-      setCertificates(JSON.parse(stored));
-    } else {
-      setCertificates(initialData);
-      localStorage.setItem("certificates", JSON.stringify(initialData));
-    }
+    fetchCertificates();
   }, []);
 
-  const addCertificate = (cert) => {
-    const newCert = { ...cert, id: Date.now() }; // Simple unique ID
-    const updated = [newCert, ...certificates];
-    setCertificates(updated);
-    localStorage.setItem("certificates", JSON.stringify(updated));
-  };
-
-  const deleteCertificate = (id) => {
-    const updated = certificates.filter((c) => c.id !== id);
-    setCertificates(updated);
-    localStorage.setItem("certificates", JSON.stringify(updated));
-  };
-
   return (
-    <CertificateContext.Provider value={{ certificates, addCertificate, deleteCertificate }}>
+    <CertificateContext.Provider value={{ certificates, loading, error }}>
       {children}
     </CertificateContext.Provider>
   );

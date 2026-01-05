@@ -1,12 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  FaInfoCircle,
-  FaCertificate,
-  FaChalkboardTeacher,
-  FaUserShield,
-  FaLaptopCode,
-} from "react-icons/fa";
+import { FaInfoCircle, FaCertificate, FaChalkboardTeacher, FaLaptopCode, FaTools } from "react-icons/fa";
 import "../App.css";
 import "../css/Header.css";
 
@@ -33,13 +27,13 @@ function Header() {
             </Link>
           </li>
           <li>
-            <Link to="/#teachers">
-              <FaChalkboardTeacher style={{ marginRight: "5px" }} /> O'qituvchilar
+            <Link to="/xizmatlar">
+              <FaTools style={{ marginRight: "5px" }} /> Xizmatlar
             </Link>
           </li>
           <li>
-            <Link to="/admin" style={{ color: "var(--primary-color)", fontWeight: "bold" }}>
-              <FaUserShield style={{ marginRight: "5px" }} /> Admin
+            <Link to="/#teachers">
+              <FaChalkboardTeacher style={{ marginRight: "5px" }} /> O'qituvchilar
             </Link>
           </li>
         </ul>

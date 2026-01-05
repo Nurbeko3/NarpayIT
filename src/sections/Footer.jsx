@@ -33,13 +33,13 @@ function Footer() {
               loyihalar.
             </p>
             <div className="social-links">
-              <a href="#" className="social-icon">
+              <a href="#" className="social-icon" aria-label="Telegram">
                 <FaTelegram />
               </a>
-              <a href="#" className="social-icon">
+              <a href="#" className="social-icon" aria-label="Instagram">
                 <FaInstagram />
               </a>
-              <a href="#" className="social-icon">
+              <a href="#" className="social-icon" aria-label="YouTube">
                 <FaYoutube />
               </a>
             </div>
@@ -68,11 +68,11 @@ function Footer() {
             <ul className="contact-list">
               <li>
                 <FaPhone className="contact-icon" />
-                <a href="tel:+998994548065">+998 99 454 80 65</a>
+                <a href="tel:+998994548065" aria-label="Telefon">+998 99 454 80 65</a>
               </li>
               <li>
                 <FaEnvelope className="contact-icon" />
-                <a href="mailto:itnarpay@gmail.com">itnarpay@gmail.com</a>
+                <a href="mailto:itnarpay@gmail.com" aria-label="Email">itnarpay@gmail.com</a>
               </li>
               <li>
                 <FaMapMarkerAlt className="contact-icon" />
@@ -85,7 +85,22 @@ function Footer() {
 
       <div className="footer-bottom">
         <div className="footer-bottom-content">
-          <p>&copy; {currentYear} IT Academy. Barcha huquqlar himoyalangan.</p>
+          <p>&copy; {currentYear} Narpay IT Academy. Barcha huquqlar himoyalangan.</p>
+
+          <div className="footer-actions">
+            <div className="footer-mobile-cta">
+              <a href="tel:+998994548065" className="footer-phone-mobile" aria-label="Call us">
+                <FaPhone style={{ marginRight: "8px" }} /> +998 99 454 80 65
+              </a>
+            </div>
+
+            <div className="footer-desktop-cta">
+              <a href="/#contact" className="btn footer-contact-btn">Aloqaga chiqish</a>
+              <a href="tel:+998994548065" className="footer-phone-link" aria-label="Call us">
+                <FaPhone style={{ marginLeft: "10px", marginRight: "6px" }} /> +998 99 454 80 65
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

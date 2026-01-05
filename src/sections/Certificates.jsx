@@ -3,7 +3,29 @@ import QRCode from "react-qr-code";
 import "../css/Certificates.css";
 
 function Certificates() {
-  const { certificates } = useCertificates();
+  const { certificates, loading, error } = useCertificates();
+
+  if (loading) {
+    return (
+      <section id="certificates" className="certificates-section">
+        <div className="certificates-container">
+          <h2 className="certificates-title">Yuklanmoqda...</h2>
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section id="certificates" className="certificates-section">
+        <div className="certificates-container">
+          <h2 className="certificates-title" style={{ color: "red" }}>
+            Xatolik yuz berdi: {error}
+          </h2>
+        </div>
+      </section>
+    );
+  }
 
   // Use reverse to show newest first if desired, or just map
   const displayCertificates = [...certificates].reverse();
@@ -19,7 +41,7 @@ function Certificates() {
 
         <div className="certificates-grid">
           {displayCertificates.map((cert) => {
-            const qrData = `O'quvchi: ${cert.studentName}\nKurs: ${cert.courseName}\nID: ${cert.qrLabel}\nSana: ${cert.date}\nBerildi: IT Academy\nLink: ${window.location.origin}/certificates`;
+            const qrData = `O'quvchi: ${cert.studentName}\nKurs: ${cert.courseName}\nID: ${cert.qrLabel}\nSana: ${cert.date}\nBerildi: Narpay IT Academy\nLink: ${window.location.origin}/certificates`;
 
             return (
               <div key={cert.id} className="certificate-card">

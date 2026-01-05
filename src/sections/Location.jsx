@@ -17,11 +17,13 @@ function LocationSection() {
       <div className="location-grid">
         <div className="map-wrapper">
           <iframe
+            className="location-map-iframe"
             src={mapIframeSrc}
             width="100%"
-            height="100%"
+            height="450"
             frameBorder="0"
             allowFullScreen={true}
+            loading="lazy"
             style={{ border: "0", borderRadius: "10px" }}
             title="O'quv Markaz Manzili Xaritasi"
           ></iframe>

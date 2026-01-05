@@ -8,7 +8,7 @@ function AboutSection() {
     <section id="about" className="about-container">
       <div className="about-content">
         <h2 className="section-title">
-          Biz Haqimizda: <span className="highlight-text">IT Academy vazifasi</span>
+          Biz Haqimizda: <span className="highlight-text">Narpay IT Academy vazifasi</span>
         </h2>
         <p className="section-subtitle">
           Bizning asosiy vazifamiz – davlat tashkilotlarida ishlovchi xodimlarning raqamli

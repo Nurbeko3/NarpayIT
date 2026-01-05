@@ -35,6 +35,26 @@ body {
   --box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);
 }
 
+/* Global responsive helpers */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+/* Small helper for containers inside sections */
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 /*
 * ----------------------------------------------------------------------
 * 2. Asosiy Konteyner (Qisilish Muammosi Hal Qilingan joy)

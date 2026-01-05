@@ -53,7 +53,7 @@ function AdvantagesSection() {
     <section id="advantages" className="advantages-container">
       <div className="advantages-header">
         <h2 className="section-title">
-          Nega aynan <span className="highlight-text">IT Academy?</span>
+          Nega aynan <span className="highlight-text">Narpay IT Academy?</span>
         </h2>
         <p className="section-subtitle">Sizning muvaffaqiyatingiz bizning ustuvor vazifamizdir.</p>
       </div>
