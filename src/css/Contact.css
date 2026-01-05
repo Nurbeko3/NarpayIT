@@ -213,8 +213,14 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .form-status.success {
@@ -240,7 +246,7 @@
   .contact-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-container {
     padding: 60px 20px;
   }

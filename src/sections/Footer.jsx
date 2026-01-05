@@ -7,6 +7,7 @@ import {
   FaTelegram,
   FaInstagram,
   FaYoutube,
+  FaLaptopCode,
 } from "react-icons/fa";
 import "../css/Footer.css";
 
@@ -20,8 +21,11 @@ function Footer() {
           <div className="footer-brand">
             <div className="logo footer-logo">
               <Link to="/">
-                <span className="logo-text">IT </span>
-                <span className="logo-highlight">Academy</span>
+                <FaLaptopCode
+                  style={{ fontSize: "1.2em", color: "var(--primary-color)", marginRight: "8px" }}
+                />
+                <span className="logo-text">Narpay IT</span>
+                <span className="logo-highlight"> Academy</span>
               </Link>
             </div>
             <p className="brand-desc">

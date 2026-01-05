@@ -52,7 +52,8 @@
   transition: transform 0.3s ease;
 }
 
-.mission-card:hover, .skills-card:hover {
+.mission-card:hover,
+.skills-card:hover {
   transform: translateY(-5px);
   border-color: rgba(56, 189, 248, 0.3);
 }
@@ -138,7 +139,7 @@
   .about-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .skills-list {
     grid-template-columns: 1fr;
   }
@@ -148,7 +149,7 @@
   .about-container {
     padding: 60px 20px;
   }
-  
+
   .section-title {
     font-size: 2em;
   }

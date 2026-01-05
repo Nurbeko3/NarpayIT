@@ -1,6 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaInfoCircle, FaCertificate, FaChalkboardTeacher, FaUserShield } from "react-icons/fa";
+import {
+  FaInfoCircle,
+  FaCertificate,
+  FaChalkboardTeacher,
+  FaUserShield,
+  FaLaptopCode,
+} from "react-icons/fa";
 import "../App.css";
 import "../css/Header.css";
 
@@ -9,8 +15,9 @@ function Header() {
     <header className="header-container">
       <div className="logo">
         <Link to="/">
-          <span className="logo-text">IT </span>
-          <span className="logo-highlight">Academy</span>
+          <FaLaptopCode style={{ fontSize: "1.4em", color: "var(--primary-color)" }} />
+          <span className="logo-text">Narpay IT</span>
+          <span className="logo-highlight"> Academy</span>
         </Link>
       </div>
       <nav className="nav-menu">

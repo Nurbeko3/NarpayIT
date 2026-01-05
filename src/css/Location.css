@@ -128,7 +128,7 @@
   .location-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .map-wrapper {
     min-height: 400px;
   }
@@ -138,7 +138,7 @@
   .location-container {
     padding: 60px 20px;
   }
-  
+
   .section-title {
     font-size: 2em;
   }

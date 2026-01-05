@@ -114,11 +114,11 @@
     background: rgba(255, 255, 255, 0.05);
     border-radius: 6px;
   }
-  
+
   .nav-menu a::after {
     display: none;
   }
-  
+
   .nav-menu a:hover {
     background: rgba(255, 255, 255, 0.1);
   }

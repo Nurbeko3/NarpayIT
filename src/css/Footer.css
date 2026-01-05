@@ -150,21 +150,21 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
+
   .footer-brand {
     align-items: center;
     text-align: center;
   }
-  
+
   .footer-section {
     text-align: center;
   }
-  
+
   .footer-section h4::after {
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   .contact-list li {
     justify-content: center;
   }

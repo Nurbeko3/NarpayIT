@@ -165,12 +165,12 @@
   .courses-container {
     padding: 60px 20px;
   }
-  
+
   .courses-footer-action {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .courses-footer-action p {
     text-align: center;
   }

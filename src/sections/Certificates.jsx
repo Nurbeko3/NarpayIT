@@ -1,6 +1,6 @@
 import { useCertificates } from "../context/CertificateContext";
 import QRCode from "react-qr-code";
-import '../css/Certificates.css'
+import "../css/Certificates.css";
 
 function Certificates() {
   const { certificates } = useCertificates();
