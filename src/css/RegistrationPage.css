@@ -1,19 +1,23 @@
 /* src/components/RegistrationPage.css */
 
 .registration-page-container {
-  padding: 80px 50px;
+  padding: 100px 20px;
   background-color: var(--dark-bg);
-  min-height: 80vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .registration-form-box {
-  background-color: var(--header-bg);
+  background: rgba(30, 41, 59, 0.4);
   padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
   width: 100%;
   max-width: 500px;
   text-align: left;
@@ -22,14 +26,14 @@
 .form-title {
   font-size: 2em;
   font-weight: 700;
-  color: var(--primary-color);
+  color: white;
   margin-bottom: 10px;
   text-align: center;
 }
 
 .course-info {
   text-align: center;
-  color: #cccccc;
+  color: #94a3b8;
   margin-bottom: 30px;
   font-size: 1.1em;
 }
@@ -37,33 +41,35 @@
 .registration-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
 .form-group label {
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
-  color: var(--secondary-color);
+  color: #e2e8f0;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #444;
-  border-radius: 5px;
-  background-color: #1a1a1a;
-  color: var(--secondary-color);
+  padding: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.6);
+  color: white;
   font-size: 1em;
-  transition: border-color 0.3s;
+  transition: all 0.3s ease;
+  font-family: inherit;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--primary-color);
+  background: rgba(15, 23, 42, 0.8);
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.1);
   outline: none;
-  box-shadow: 0 0 5px rgba(97, 218, 251, 0.5);
 }
 
 .btn-submit-form {

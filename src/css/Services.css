@@ -32,11 +32,12 @@
 }
 
 .service-card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border: 1px solid rgba(255,255,255,0.03);
-  border-radius: 12px;
-  padding: 22px;
-  box-shadow: var(--box-shadow);
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   transition: transform 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
   cursor: pointer;
   display: flex;
