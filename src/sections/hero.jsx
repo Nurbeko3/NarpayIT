@@ -19,21 +19,21 @@ function HeroSection() {
       title: "Kelajak kasbini",
       highlight: "Biz bilan o'zlashtiring",
       subtitle: "Komanda bilan real loyihalar ustida o'rganing — amaliy yo'nalishlar.",
-      bg: `linear-gradient(to bottom, rgba(15,23,42,0.4), rgba(15,23,42,0.8)), url(${CertificateLogo})`,
+      bg: `url(${CertificateLogo})`,
     },
     {
       key: "slide-2",
       title: "Tezkor va amaliy",
       highlight: "Ishga tayyor ko'nikmalar",
       subtitle: "Kurslarimiz real ish jarayonlariga yo'naltirilgan.",
-      bg: `linear-gradient(to bottom, rgba(15,23,42,0.4), rgba(15,23,42,0.8)), url(${HeroSlide2})`,
+      bg: `url(${HeroSlide2})`,
     },
     {
       key: "slide-3",
       title: "Onlayn & Ofis",
       highlight: "Fleksibil ta'lim",
       subtitle: "Sizga qulay formatda — online yoki ofisda tahsil oling.",
-      bg: `linear-gradient(to bottom, rgba(15,23,42,0.4), rgba(15,23,42,0.8)), url(${HeroSlide3})`,
+      bg: `url(${HeroSlide3})`,
     },
   ];
 

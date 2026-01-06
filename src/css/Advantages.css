@@ -2,8 +2,8 @@
 
 .advantages-container {
   padding: 100px 20px;
-  background-color: var(--dark-bg);
-  color: #fff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -43,14 +43,14 @@
 
 .section-subtitle {
   font-size: 1.1em;
-  color: #94a3b8;
+  color: var(--text-muted);
   max-width: 600px;
   margin: 0 auto;
 }
 
 .advantages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto 60px;
@@ -59,8 +59,8 @@
 }
 
 .advantage-card {
-  background: rgba(30, 41, 59, 0.4);
-  border: 1px solid rgba(148, 163, 184, 0.1);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 20px;
   padding: 40px 30px;
   transition: all 0.3s ease;
@@ -75,9 +75,10 @@
 
 .advantage-card:hover {
   transform: translateY(-10px);
-  border-color: rgba(56, 189, 248, 0.3);
+  border-color: var(--primary-color);
   box-shadow: 0 20px 40px -15px rgba(56, 189, 248, 0.15);
-  background: rgba(30, 41, 59, 0.6);
+  background: var(--card-bg);
+  filter: brightness(1.05);
 }
 
 .icon-wrapper {
@@ -103,13 +104,13 @@
 .card-title {
   font-size: 1.4em;
   margin-bottom: 12px;
-  color: #fff;
+  color: var(--text-color);
   font-weight: 600;
 }
 
 .card-description {
   font-size: 1em;
-  color: #94a3b8;
+  color: var(--text-muted);
   line-height: 1.6;
 }
 

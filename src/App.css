@@ -20,19 +20,65 @@
 body {
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
-  background: radial-gradient(circle at top left, #0f172a 0, #020617 40%, #000000 100%), #020617;
-  color: #f0f0f0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   min-height: 100vh;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Saytning asosiy ranglari (CSS Custom Properties) */
+/* Saytning asosiy ranglari (CSS Custom Properties) */
 :root {
-  --primary-color: #38bdf8; /* Yorqin IT ko'k (Sky) */
-  --secondary-color: #f9fafb;
-  --dark-bg: #020617; /* Asosiy fon (chuqur dark) */
-  --header-bg: #020617; /* Header/Komponent fon */
-  --box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);
+  /* Default Theme (Dark) */
+  --primary-color: #38bdf8; /* Sky Blue */
+  --primary-hover: #0ea5e9;
+  --bg-color: #020617; /* Very Dark Slate */
+  --text-color: #f1f5f9;
+  --text-muted: #94a3b8;
+  
+  --header-bg: rgba(2, 6, 23, 0.8);
+  --card-bg: rgba(30, 41, 59, 0.5);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --overlay-bg: rgba(2, 6, 23, 0.7);
+  
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  
+  --hero-overlay-gradient: linear-gradient(to bottom, rgba(15,23,42,0.4), rgba(15,23,42,0.95));
+  
+  --hero-text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --hero-subtitle-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  
+  --hero-btn-sec-bg: rgba(255, 255, 255, 0.1);
+  --hero-btn-sec-border: rgba(255, 255, 255, 0.2);
+  --hero-btn-sec-text: #ffffff;
+  --hero-btn-sec-hover: rgba(255, 255, 255, 0.2);
+}
+
+/* Light Theme overrides */
+[data-theme="light"] {
+  --bg-color: #f8fafc; /* Slate 50 */
+  --text-color: #1e293b; /* Slate 800 */
+  --text-muted: #475569; /* Slate 600 - Darker for better contrast */
+
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --card-bg: rgba(255, 255, 255, 0.8); /* Slightly more opaque */
+  --card-border: rgba(226, 232, 240, 0.8);
+  --overlay-bg: rgba(255, 255, 255, 0.6); 
+
+  --shadow-color: rgba(148, 163, 184, 0.15);
+  --box-shadow: 0 10px 30px -10px rgba(148, 163, 184, 0.25);
+  
+  --hero-overlay-gradient: linear-gradient(to bottom, rgba(255, 255, 255, 0.85), rgba(248, 250, 252, 0.98));
+  
+  --hero-text-shadow: none;
+  --hero-subtitle-shadow: none;
+  
+  --hero-btn-sec-bg: rgba(255, 255, 255, 0.6);
+  --hero-btn-sec-border: rgba(203, 213, 225, 1);
+  --hero-btn-sec-text: #334155;
+  --hero-btn-sec-hover: #ffffff;
 }
 
 /* Global responsive helpers */
@@ -70,10 +116,11 @@ table {
 }
 
 main {
-  /* Faqat main ichidagi kontent (Advantages, Courses) uchun markaziy konteyner */
-  max-width: 1280px;
-  margin: 0 auto; /* Kontentni markazga joylashtirish */
-  padding-bottom: 50px; /* Footerdan oldin bo'sh joy qoldirish */
+  /* Main content wrapper - full width to allow sections to control their own backgrounds */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0;
 }
 
 /*
@@ -135,11 +182,7 @@ html {
 }
 /* 1. Katta ekranlar va Planşetlar uchun (1024px gacha) */
 @media (max-width: 1024px) {
-  main {
-    max-width: 95%; /* Chetda ozgina joy qolishi uchun */
-    padding: 0 20px;
-  }
-
+  /* Removed main constraint */
   h1 {
     font-size: 2.5em; /* Sarlavha biroz kichrayadi */
   }
@@ -165,9 +208,7 @@ html {
   }
 
   /* Mobil qurilmalarda paddinglarni kamaytiramiz */
-  main {
-    padding: 0 15px;
-  }
+  /* Main padding removed to allow full width hero */
 }
 
 /* 3. Mobil telefonlar uchun (480px gacha) */

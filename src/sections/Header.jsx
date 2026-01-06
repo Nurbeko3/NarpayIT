@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaInfoCircle, FaCertificate, FaChalkboardTeacher, FaLaptopCode, FaTools } from "react-icons/fa";
+import {
+  FaInfoCircle,
+  FaCertificate,
+  FaChalkboardTeacher,
+  FaLaptopCode,
+  FaTools,
+  FaMoon,
+  FaSun,
+} from "react-icons/fa";
 import "../App.css";
 import "../css/Header.css";
 
 function Header() {
+  const [theme, setTheme] = useState("dark");
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  };
+
   return (
     <header className="header-container">
       <div className="logo">
@@ -35,6 +53,11 @@ function Header() {
             <Link to="/#teachers">
               <FaChalkboardTeacher style={{ marginRight: "5px" }} /> O'qituvchilar
             </Link>
+          </li>
+          <li>
+            <button className="theme-toggle-btn" onClick={toggleTheme} aria-label="Toggle Theme">
+              {theme === "dark" ? <FaSun /> : <FaMoon />}
+            </button>
           </li>
         </ul>
       </nav>

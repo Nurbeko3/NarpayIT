@@ -2,13 +2,13 @@
 
 .location-container {
   padding: 100px 50px;
-  background-color: var(--dark-bg);
+  background-color: var(--bg-color);
   position: relative;
   overflow: hidden;
 }
 
 .section-title {
-  color: white;
+  color: var(--text-color);
 }
 
 .highlight-text {
@@ -20,7 +20,7 @@
 
 .section-subtitle {
   font-size: 1.25em;
-  color: #94a3b8;
+  color: var(--text-muted);
   max-width: 600px;
   margin: 0 auto 60px;
   line-height: 1.6;
@@ -38,10 +38,10 @@
   background: rgba(30, 41, 59, 0.4);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 40px -10px var(--shadow-color);
   height: 100%;
   min-height: 450px;
-  border: 1px solid rgba(148, 163, 184, 0.1);
+  border: 1px solid var(--card-border);
   position: relative;
 }
 
@@ -70,10 +70,10 @@
 }
 
 .location-info {
-  background: rgba(30, 41, 59, 0.4);
+  background: var(--card-bg);
   padding: 40px;
   border-radius: 20px;
-  border: 1px solid rgba(148, 163, 184, 0.1);
+  border: 1px solid var(--card-border);
   backdrop-filter: blur(10px);
   height: 100%;
   display: flex;
@@ -81,7 +81,7 @@
 }
 
 .location-info h3 {
-  color: white;
+  color: var(--text-color);
   margin-bottom: 30px;
   font-size: 1.8em;
 }
@@ -96,7 +96,7 @@
 .info-icon {
   width: 45px;
   height: 45px;
-  background: rgba(56, 189, 248, 0.1);
+  background: var(--card-bg);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -116,11 +116,11 @@
 .info-item h4 {
   font-size: 1.1em;
   margin-bottom: 5px;
-  color: white;
+  color: var(--text-color);
 }
 
 .info-item p {
-  color: #94a3b8;
+  color: var(--text-muted);
   font-size: 1em;
   line-height: 1.6;
 }
