@@ -1,16 +1,20 @@
-# React + Vite
+# Narpay IT Academy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu loyiha Narpay IT Akademiyasi uchun yaratilgan veb-sayt hisoblanadi.
 
-Currently, two official plugins are available:
+## Texnologiyalar
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- Vite
+- React Router (SPA)
 
-## React Compiler
+## Ishga tushirish
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Vercel Deploy Eslatmasi
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Vercel uchun `vercel.json` fayli qo'shildi, bu SPA routing (404 xatolik) muammolarini hal qiladi.
