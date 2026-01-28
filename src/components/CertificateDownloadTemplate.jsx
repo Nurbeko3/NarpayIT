@@ -204,7 +204,7 @@ const CertificateDownloadTemplate = forwardRef(({ certificate }, ref) => {
             minWidth: '200px',
             position: 'relative',
             zIndex: 20,
-            marginRight: '60px'
+            marginRight: '90px' // Shifted more to the right
         },
 
         labelSmall: {
@@ -242,13 +242,13 @@ const CertificateDownloadTemplate = forwardRef(({ certificate }, ref) => {
         },
 
         directorName: {
-            fontSize: '26px',
+            fontSize: '22px', // Slightly smaller for better proportion
             fontWeight: 'bold',
-            color: '#0f172a', /* Dark slate for better contrast */
+            color: '#0f172a', /* Dark slate */
             fontFamily: "'Playfair Display', serif",
-            borderTop: '2px solid #f59e0b', /* Gold line */
-            paddingTop: '15px',
-            marginTop: '50px', /* Space for signature */
+            borderTop: 'none', /* Removed gold line */
+            paddingTop: '0',
+            marginTop: '30px', /* Reduced space but still enough for signature */
             display: 'inline-block',
             minWidth: '220px',
             textAlign: 'center'

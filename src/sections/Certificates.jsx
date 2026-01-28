@@ -80,6 +80,10 @@ function Certificates() {
           bir sertifikatda QR kod orqali haqiqiyligini tekshirish mumkin.
         </p>
 
+        <div style={{ textAlign: 'center', marginBottom: '30px', color: '#10b981', fontWeight: 'bold', fontSize: '1.2rem' }}>
+          Jami bitiruvchilar: {certificates.length} nafar
+        </div>
+
         <div className="certificates-grid">
           {displayCertificates.map((cert) => {
             const qrData = `O'quvchi: ${cert.studentName}\nKurs: ${cert.courseName}\nID: ${cert.qrLabel}\nSana: ${cert.date}\nBerildi: Narpay IT Academy\nLink: ${window.location.origin}/certificates`;
