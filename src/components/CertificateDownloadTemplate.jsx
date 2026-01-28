@@ -156,7 +156,7 @@ const CertificateDownloadTemplate = forwardRef(({ certificate }, ref) => {
         },
 
         studentName: {
-            fontSize: '56px',
+            fontSize: '42px',
             fontWeight: 'bold',
             color: '#1e293b',
             fontFamily: "'Playfair Display', serif",
