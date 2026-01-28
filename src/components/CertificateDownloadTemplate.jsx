@@ -198,10 +198,13 @@ const CertificateDownloadTemplate = forwardRef(({ certificate }, ref) => {
             minWidth: '200px'
         },
         footerSectionRight: {
-            textAlign: 'right',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center', /* Centers the label and name relative to each other */
             minWidth: '200px',
             position: 'relative',
-            zIndex: 20 // Ensure on top
+            zIndex: 20,
+            marginRight: '60px'
         },
 
         labelSmall: {
@@ -239,15 +242,15 @@ const CertificateDownloadTemplate = forwardRef(({ certificate }, ref) => {
         },
 
         directorName: {
-            fontSize: '24px',
+            fontSize: '26px',
             fontWeight: 'bold',
-            color: '#1e3a8a',
+            color: '#0f172a', /* Dark slate for better contrast */
             fontFamily: "'Playfair Display', serif",
-            borderTop: '1px solid #94a3b8',
-            paddingTop: '10px',
-            marginTop: '35px',
+            borderTop: '2px solid #f59e0b', /* Gold line */
+            paddingTop: '15px',
+            marginTop: '50px', /* Space for signature */
             display: 'inline-block',
-            minWidth: '200px',
+            minWidth: '220px',
             textAlign: 'center'
         }
     };
@@ -341,17 +344,15 @@ const CertificateDownloadTemplate = forwardRef(({ certificate }, ref) => {
                     </div>
 
                     <div style={styles.footerCenter}>
-                        <div style={{ ...styles.labelSmall, marginBottom: '10px', fontWeight: 'bold', color: '#1e3a8a' }}>
-                            ASILLIKNI TEKSHIRISH
-                        </div>
+
                         <div style={styles.qrWrapper}>
                             <QRCode value={qrData} size={95} />
                         </div>
                     </div>
 
                     <div style={styles.footerSectionRight}>
-                        <div style={styles.labelSmall}>Academy Direktori</div>
-                        <div style={styles.directorName}>H.Zulfiqorov</div>
+                        <div style={styles.labelSmall}>O'quv markazi direktori</div>
+                        <div style={styles.directorName}>H.SH.Zulfiqorov</div>
                     </div>
                 </div>
             </div>

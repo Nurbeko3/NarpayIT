@@ -140,7 +140,7 @@ function Certificates() {
                 <div className="certificate-footer">
                   <div className="certificate-signature">
                     <div className="signature-line" />
-                    <p className="signature-label">Akademiya direktori</p>
+                    <p className="signature-label">O'quv markazi direktori</p>
                   </div>
                   <div className="certificate-qr">
                     <div className="qr-container">
