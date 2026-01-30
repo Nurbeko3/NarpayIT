@@ -157,3 +157,194 @@
     font-size: 2em;
   }
 }
+
+/* Documents Section */
+.documents-section {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.documents-title {
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  background: linear-gradient(135deg, var(--text-color), var(--primary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.documents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 10px;
+}
+
+.document-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Very subtle border */
+  border-radius: 20px;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.document-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 20px;
+  padding: 2px; /* Border width */
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0)); 
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.document-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255, 255, 255, 0.08); /* Slightly lighter on hover */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.doc-icon-box {
+  width: 60px;
+  height: 60px;
+  background: rgba(239, 68, 68, 0.1); /* Red tint for PDF */
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.doc-icon {
+  font-size: 28px;
+  color: #ef4444;
+  transition: all 0.3s ease;
+}
+
+.document-card:hover .doc-icon-box {
+  background: #ef4444;
+  transform: rotate(-10deg) scale(1.1);
+  box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.3);
+}
+
+.document-card:hover .doc-icon {
+  color: white;
+  transform: scale(1.1);
+}
+
+.document-info {
+  flex: 1;
+  text-align: left;
+  z-index: 1;
+}
+
+.document-name {
+  display: block;
+  font-weight: 700;
+  font-size: 1.15em;
+  margin-bottom: 4px;
+  background: linear-gradient(90deg, var(--text-color), var(--text-muted));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.document-card:hover .document-name {
+  background: linear-gradient(90deg, var(--primary-color), #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.document-type {
+  display: block;
+  font-size: 0.85em;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.download-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-hover); /* Assume this var exists or fallback */
+  background-color: rgba(128, 128, 128, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.download-icon {
+  font-size: 1.1em;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.document-card:hover .download-box {
+  background: var(--primary-color);
+  transform: translateX(0);
+}
+
+.document-card:hover .download-icon {
+  color: white;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+/* Word Document Specific Styles */
+.doc-icon-box.word {
+  background: rgba(37, 99, 235, 0.1); /* Blue tint for Word */
+}
+
+.doc-icon-box.word .doc-icon {
+  color: #2563eb;
+}
+
+.document-card:hover .doc-icon-box.word {
+  background: #2563eb;
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+}
+
+/* Certificate Specific Styles */
+.doc-icon-box.certificate {
+  background: rgba(234, 179, 8, 0.1); /* Yellow/Gold tint */
+}
+
+.doc-icon-box.certificate .doc-icon {
+  color: #eab308;
+}
+
+.document-card:hover .doc-icon-box.certificate {
+  background: #eab308;
+  box-shadow: 0 10px 15px -3px rgba(234, 179, 8, 0.3);
+}

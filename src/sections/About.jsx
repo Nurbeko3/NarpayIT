@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaCheckCircle, FaLaptopHouse, FaArrowRight } from "react-icons/fa";
+import { FaCheckCircle, FaLaptopHouse, FaArrowRight, FaFilePdf, FaFileWord, FaCertificate, FaDownload } from "react-icons/fa";
 import "../css/About.css";
 
 function AboutSection() {
@@ -61,6 +61,89 @@ function AboutSection() {
                 foydalanish
               </li>
             </ul>
+          </div>
+        </div>
+
+        <div className="documents-section">
+          <h3 className="documents-title">Meyoriy-huquqiy hujjatlar</h3>
+          <div className="documents-grid">
+            <a href="/pdf/Buyruq.pdf" target="_blank" rel="noopener noreferrer" className="document-card">
+              <div className="doc-icon-box">
+                <FaFilePdf className="doc-icon" />
+              </div>
+              <div className="document-info">
+                <span className="document-name">Buyruq</span>
+                <span className="document-type">PDF Hujjat</span>
+              </div>
+              <div className="download-box">
+                <FaDownload className="download-icon" />
+              </div>
+            </a>
+
+            <a href="/pdf/business-plan.pdf" target="_blank" rel="noopener noreferrer" className="document-card">
+              <div className="doc-icon-box">
+                <FaFilePdf className="doc-icon" />
+              </div>
+              <div className="document-info">
+                <span className="document-name">Biznes Reja</span>
+                <span className="document-type">PDF Hujjat</span>
+              </div>
+              <div className="download-box">
+                <FaDownload className="download-icon" />
+              </div>
+            </a>
+
+            <a href="/pdf/Habar malaka.pdf" target="_blank" rel="noopener noreferrer" className="document-card">
+              <div className="doc-icon-box">
+                <FaFilePdf className="doc-icon" />
+              </div>
+              <div className="document-info">
+                <span className="document-name">Malaka Oshirish Xabari</span>
+                <span className="document-type">PDF Hujjat</span>
+              </div>
+              <div className="download-box">
+                <FaDownload className="download-icon" />
+              </div>
+            </a>
+
+            <a href="/pdf/Habar kurs.pdf" target="_blank" rel="noopener noreferrer" className="document-card">
+              <div className="doc-icon-box">
+                <FaFilePdf className="doc-icon" />
+              </div>
+              <div className="document-info">
+                <span className="document-name">Kurslar haqida Xabar</span>
+                <span className="document-type">PDF Hujjat</span>
+              </div>
+              <div className="download-box">
+                <FaDownload className="download-icon" />
+              </div>
+            </a>
+
+            <a href="/pdf/dogovor_oferta.docx" target="_blank" rel="noopener noreferrer" className="document-card">
+              <div className="doc-icon-box word">
+                <FaFileWord className="doc-icon" />
+              </div>
+              <div className="document-info">
+                <span className="document-name">Shartnoma (Oferta)</span>
+                <span className="document-type">Word Hujjat</span>
+              </div>
+              <div className="download-box">
+                <FaDownload className="download-icon" />
+              </div>
+            </a>
+
+            <a href="/pdf/certificate.png" target="_blank" rel="noopener noreferrer" className="document-card">
+              <div className="doc-icon-box certificate">
+                <FaCertificate className="doc-icon" />
+              </div>
+              <div className="document-info">
+                <span className="document-name">Sertifikat Namuna</span>
+                <span className="document-type">PNG Rasm</span>
+              </div>
+              <div className="download-box">
+                <FaDownload className="download-icon" />
+              </div>
+            </a>
           </div>
         </div>
 
