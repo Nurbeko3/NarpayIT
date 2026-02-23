@@ -12,7 +12,7 @@ export const CertificateProvider = ({ children }) => {
   useEffect(() => {
     const fetchCertificates = async () => {
       try {
-        const response = await fetch("https://api-narpay-backend.onrender.com/api/certificates");
+        const response = await fetch("https://api-narpay.onrender.com/api/certificates");
         if (!response.ok) {
           throw new Error("Failed to fetch certificates");
         }
