@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { message } from "antd";
 import {
   FaPhone,
   FaEnvelope,
@@ -13,6 +14,19 @@ import "../css/Footer.css";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const handleSocialClick = (e, platform) => {
+    e.preventDefault();
+    message.loading({
+      content: `${platform} kanaliga ma'lumotlar yuklanmoqda...`,
+      duration: 2.5,
+      style: {
+        marginTop: '5vh',
+        fontSize: '1.1em',
+        fontWeight: '500'
+      }
+    });
+  };
 
   return (
     <footer className="footer-container">
@@ -36,10 +50,10 @@ function Footer() {
               <a href="https://t.me/uzsnur19805" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Telegram">
                 <FaTelegram />
               </a>
-              <a href="#" className="social-icon" aria-label="Instagram" onClick={(e) => { e.preventDefault(); alert("Instagram sahifamizga ma'lumotlar yuklanmoqda..."); }}>
+              <a href="#" className="social-icon" aria-label="Instagram" onClick={(e) => handleSocialClick(e, 'Instagram')}>
                 <FaInstagram />
               </a>
-              <a href="#" className="social-icon" aria-label="YouTube" onClick={(e) => { e.preventDefault(); alert("YouTube kanalimizga ma'lumotlar yuklanmoqda..."); }}>
+              <a href="#" className="social-icon" aria-label="YouTube" onClick={(e) => handleSocialClick(e, 'YouTube')}>
                 <FaYoutube />
               </a>
             </div>

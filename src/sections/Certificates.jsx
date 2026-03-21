@@ -5,13 +5,14 @@ import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import CertificateDownloadTemplate from "../components/CertificateDownloadTemplate";
 import "../css/Certificates.css";
-import { FaDownload } from "react-icons/fa";
+import { FaDownload, FaSearch } from "react-icons/fa";
 
 function Certificates() {
   const { certificates, loading, error } = useCertificates();
   const certificateRef = useRef(null);
   const [downloadingId, setDownloadingId] = useState(null);
   const [tempCertificate, setTempCertificate] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleDownload = async (cert) => {
     setDownloadingId(cert.id || cert.qrLabel); // Use a unique ID
@@ -69,7 +70,38 @@ function Certificates() {
   }
 
   // Use reverse to show newest first if desired
-  const displayCertificates = [...certificates].reverse();
+  const displayCertificates = [...certificates]
+    .reverse()
+    .filter((cert) => {
+      if (!searchTerm) return true;
+      const lower = searchTerm.toLowerCase();
+      const nameMatch = cert.studentName?.toLowerCase().includes(lower);
+      const courseMatch = cert.courseName?.toLowerCase().includes(lower);
+      const idMatch = cert.qrLabel?.toLowerCase().includes(lower);
+      return nameMatch || courseMatch || idMatch;
+    });
+
+  // Calculate Statistics based on date
+  const monthNames = ["Yanvar", "Fevral", "Mart", "Aprel", "May", "Iyun", "Iyul", "Avgust", "Sentyabr", "Oktyabr", "Noyabr", "Dekabr"];
+  const statsMap = certificates.reduce((acc, cert) => {
+    let dateStr = cert.date;
+    if (!dateStr) return acc;
+    if (dateStr.length === 8 && !dateStr.includes("-")) {
+      dateStr = `${dateStr.slice(0,4)}-${dateStr.slice(4,6)}-${dateStr.slice(6,8)}`;
+    }
+    const d = new Date(dateStr);
+    if (!isNaN(d)) {
+      const label = `${monthNames[d.getMonth()]} ${d.getFullYear()}`;
+      acc[label] = (acc[label] || 0) + 1;
+    }
+    return acc;
+  }, {});
+  
+  const statsArray = Object.entries(statsMap).sort((a, b) => {
+    // Basic string sort is ok since format is Month YYYY, but could be specific if needed. 
+    // Usually backend sends them closely ordered, but reverse to show newest month first
+    return b[1] - a[1]; // sorting by count for descending popularity, or could sort by date
+  });
 
   return (
     <section id="certificates" className="certificates-section">
@@ -80,8 +112,45 @@ function Certificates() {
           bir sertifikatda QR kod orqali haqiqiyligini tekshirish mumkin.
         </p>
 
+        {statsArray.length > 0 && (
+          <div className="certificates-stats-wrapper">
+            <h3 className="stats-title">Oylik Ko'rsatkichlar</h3>
+            <div className="stats-cards-container">
+              {statsArray.map(([label, count]) => (
+                <div key={label} className="stat-card">
+                  <div className="stat-value">{count}</div>
+                  <div className="stat-label">{label}</div>
+                  <div className="stat-progress-bg">
+                    <div 
+                      className="stat-progress-fill" 
+                      style={{ width: `${Math.min((count / certificates.length) * 100 * 1.5, 100)}%` }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="certificates-search-container">
+          <div className="search-box">
+            <FaSearch className="search-icon" />
+            <input
+              type="text"
+              placeholder="Ism, familiya, kurs yoki ID bo'yicha qidiring..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="certificate-search-input"
+            />
+          </div>
+        </div>
+
         <div style={{ textAlign: 'center', marginBottom: '30px', color: '#10b981', fontWeight: 'bold', fontSize: '1.2rem' }}>
-          Jami bitiruvchilar: {certificates.length} nafar
+          {searchTerm ? (
+             <span>Izlash natijasi: {displayCertificates.length} ta topildi (Jami: {certificates.length})</span>
+          ) : (
+             <span>Jami bitiruvchilar: {certificates.length} nafar</span>
+          )}
         </div>
 
         <div className="certificates-grid">
