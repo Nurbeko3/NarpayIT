@@ -16,7 +16,7 @@
   padding: 40px;
   border-radius: 20px;
   border: 1px solid var(--card-border);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); ushlandi performance uchun */
   box-shadow: 0 20px 40px -10px var(--shadow-color);
   width: 100%;
   max-width: 500px;

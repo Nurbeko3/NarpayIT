@@ -28,7 +28,7 @@
   flex-direction: column;
   position: relative;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); ushlandi performance uchun */
   overflow: hidden;
 }
 
@@ -132,7 +132,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); ushlandi performance uchun */
 }
 
 .courses-footer-action p {

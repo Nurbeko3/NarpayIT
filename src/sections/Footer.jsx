@@ -33,13 +33,13 @@ function Footer() {
               loyihalar.
             </p>
             <div className="social-links">
-              <a href="#" className="social-icon" aria-label="Telegram">
+              <a href="https://t.me/uzsnur19805" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Telegram">
                 <FaTelegram />
               </a>
-              <a href="#" className="social-icon" aria-label="Instagram">
+              <a href="#" className="social-icon" aria-label="Instagram" onClick={(e) => { e.preventDefault(); alert("Instagram sahifamizga ma'lumotlar yuklanmoqda..."); }}>
                 <FaInstagram />
               </a>
-              <a href="#" className="social-icon" aria-label="YouTube">
+              <a href="#" className="social-icon" aria-label="YouTube" onClick={(e) => { e.preventDefault(); alert("YouTube kanalimizga ma'lumotlar yuklanmoqda..."); }}>
                 <FaYoutube />
               </a>
             </div>
@@ -53,6 +53,12 @@ function Footer() {
               </li>
               <li>
                 <a href="/#courses">Kurslar</a>
+              </li>
+              <li>
+                <a href="/#teachers">O'qituvchilar</a>
+              </li>
+              <li>
+                <Link to="/xizmatlar">Xizmatlar</Link>
               </li>
               <li>
                 <Link to="/certificates">Sertifikatlar</Link>

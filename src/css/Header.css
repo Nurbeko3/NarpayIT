@@ -11,14 +11,14 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(16px);
+  /* backdrop-filter: blur(16px); ushlandi performance uchun */
   border-bottom: 1px solid rgba(148, 163, 184, 0.25);
   transition: all 0.3s ease;
 }
 
 .header-container:hover {
   background: var(--header-bg);
-  backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px); ushlandi performance uchun */
 }
 
 .logo a {

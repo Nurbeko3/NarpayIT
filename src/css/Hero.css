@@ -32,6 +32,7 @@
   background-position: center;
   opacity: 0;
   visibility: hidden;
+  will-change: transform, opacity;
   transition:
     opacity 1s ease-in-out,
     transform 6s ease-out;
@@ -50,7 +51,7 @@
   position: absolute;
   inset: 0;
   background: var(--hero-overlay-gradient);
-  backdrop-filter: blur(3px);
+  /* backdrop-filter: blur(3px); ushlandi performance uchun */
 }
 
 /* --- Main Content Overlay --- */
@@ -134,7 +135,7 @@
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  backdrop-filter: blur(4px);
+  /* backdrop-filter: blur(4px); ushlandi performance uchun */
 }
 
 .btn-primary {
@@ -181,7 +182,7 @@
   padding: 16px 24px;
   border-radius: 16px;
   border: 1px solid var(--card-border);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); ushlandi performance uchun */
   min-width: 240px;
   transition: transform 0.3s ease;
 }

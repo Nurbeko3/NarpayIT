@@ -48,7 +48,7 @@
   border-radius: 20px;
   border: 1px solid var(--card-border);
   box-shadow: 0 10px 30px -10px var(--shadow-color);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); ushlandi performance uchun */
   transition: transform 0.3s ease;
 }
 
@@ -192,7 +192,7 @@
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); ushlandi performance uchun */
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
